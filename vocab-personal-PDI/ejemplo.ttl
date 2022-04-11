@@ -1,0 +1,112 @@
+ @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.owl-ontologies.com/geo#> .
+@prefix geosparql: <http://www.owl-ontologies.com/geosparql#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix univPDI: <http://vocab.universidadesabiertas.es/ontology/recursos-humanos#PDI> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+univPDI:Juan_Mata a univPDI:PersonalDocenteInvestigador ;
+    univPDI:anioNacimiento "1969"^^xsd:integer ;
+    univPDI:anioIncorporacion "2003"^^xsd:integer ;
+    univPDI:anioIncorporacionAp "2000"^^xsd:integer ;
+    univPDI:anioIncorporaCuerpoDocente "2003"^^xsd:integer ;
+    univPDI:anioExpedicionTituloDoctor "2001"^^xsd:integer ;
+    univPDI:anioLecturaTesis "2001"^^xsd:integer ;
+    univPDI:numHorasSemanalesTiempoParcial "25"^^xsd:integer ;
+    univPDI:mencionEuropea "true"^^xsd:boolean ;
+    univPDI:indCargoRemunerado "true"^^xsd:boolean ;
+    univPDI:indInvestigadorPrincipal "false"^^xsd:boolean ;
+    univPDI:numTrienios "3"^^xsd:integer ;
+    univPDI:numQuinquenios "2"^^xsd:integer ;
+    univPDI:numSexenios "1"^^xsd:integer ;
+    univPDI:numTesis "1"^^xsd:integer ;
+    univPDI:genero <http://vocab.universidadesabiertas.es/kos/genero/hombre> ;
+    univPDI:dedicacion <http://vocab.universidadesabiertas.es/kos/dedicacion/tiempo-completo> ;
+    univPDI:tipoContrato <http://vocab.universidadesabiertas.es/kos/tipo-contrato/indefinido> ;
+    univPDI:tipoPersonal <http://vocab.universidadesabiertas.es/kos/tipo-personal/funcionario-de-carrera> ;
+    univPDI:tituloDoctorado <http://vocab.universidadesabiertas.es/kos/titulo-doctorado/uno> ;
+    univPDI:categoriaCuerpoEscala <http://vocab.universidadesabiertas.es/kos/categoria-cuerpo-escala/catedratico> ;
+    univPDI:situacionAdministrativa <http://vocab.universidadesabiertas.es/kos/situacion-administrativa/servicio-activo> ;
+    univPDI:trabajaEn univPDI:UPM ;
+    univPDI:estudioEn univPDI:UCM ;
+    univPDI:perteneceA univPDI:DATSI ;
+    univPDI:formaParteDe univPDI:Arquitectura_y_Tecnologia_de_Computadores ;
+    univPDI:posee univPDI:Espagna ;
+    univPDI:posee univPDI:Europa ;
+    univPDI:posee univPDI:UnionEuropea ;
+    univPDI:posee univPDI:Getafe ;
+    univPDI:posee univPDI:Madrid ;
+    univPDI:posee univPDI:Comunidad_de_Madrid ;
+    rdfs:subClassOf schema:Person .
+    
+univPDI:UPM a univPDI:Universidad ;
+    dct:identifier "025"^^xsd:string ;
+    univPDI:tieneAsociado univPDI:2022 ;
+    rdfs:subClassOf org:Organization .
+
+univPDI:UCM a univPDI:UniversidadDoctorado ;
+    dct:identifier "010"^^xsd:string ;
+    univPDI:estaUbicadaEn univPDI:Espagna ;
+    univPDI:estaUbicadaEn univPDI:Europa ;
+    univPDI:estaUbicadaEn univPDI:UnionEuropea ;
+    rdfs:subClassOf org:Organization .
+
+univPDI:2022 a univPDI:Anio .
+
+univPDI:DATSI a univPDI:UnidadResponsable ;
+    dct:identifier "0250003" ;
+    univPDI:tipoUnidadResponsable <http://vocab.universidadesabiertas.es/kos/tipo-unidad-responsable/departamento> .
+
+univPDI:Arquitectura_y_Tecnologia_de_Computadores a univPDI:AreaConocimiento ;
+    dct:identifier "014" .
+
+univPDI:Espagna a univPDI:PaisNacionalidad ;
+    a univPDI:PaisDoctorado ;
+    dct:identifier "108" ;
+    rdfs:subClassOf univPDI:ContinenteNacionalidad ;
+    rdfs:subClassOf univPDI:ContinenteDoctorado ;
+    rdfs:subClassOf geosparql:Feature_Espagna .
+
+univPDI:Europa a univPDI:ContinenteNacionalidad ;
+    a univPDI:ContinenteDoctorado ;
+    dct:identifier "01" .
+
+univPDI:UnionEuropea a univPDI:AgregacionPaisesNacionalidad ;
+    a univPDI:AgregacionPaisesDoctorado ;
+    dct:identifier "11" ;
+    rdfs:subClassOf univPDI:ContinenteNacionalidad ;
+    rdfs:subClassOf univPDI:ContinenteDoctorado .
+
+univPDI:Getafe a univPDI:MunicipioResidencia ;
+    dct:identifier "065" ;
+    rdfs:subClassOf univPDI:ProvinciaResidencia ;
+    rdfs:subClassOf geosparql:Feature_Getafe .
+
+univPDI:Madrid a univPDI:ProvinciaResidencia ;
+    dct:identifier "28" ;
+    rdfs:subClassOf univPDI:ComunidadResidencia .
+
+univPDI:Comunidad_de_Madrid a univPDI:ComunidadResidencia ;
+    dct:identifier "13" .
+
+geosparql:Feature_Espagna geosparql:hasGeometry geosparql:Geometry_Espagna .
+
+geosparql:Geometry_Espagna a geosparql:Point_Espagna ;
+    geosparql:asWKT "POINT (1.601554,42.546245)"^^geosparql:wktLiteral .
+
+univPDI:Point_Espagna a geosparql:Point ;
+    geo:long "1.601554"^^xsd:double ;
+    geo:lat "42.546245"^^xsd:double .
+
+geosparql:Feature_Getafe geosparql:hasGeometry geosparql:Geometry_Getafe .
+
+geosparql:Geometry_Getafe a geosparql:Point_Getafe ;
+    geosparql:asWKT "POINT (-3.732585,40.308263)"^^geosparql:wktLiteral .
+
+univPDI:Point_Getafe a geosparql:Point ;
+    geo:long "-3.732585"^^xsd:double ;
+    geo:lat "40.308263"^^xsd:double .

@@ -1,0 +1,330 @@
+ @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.owl-ontologies.com/geo#> .
+@prefix geosparql: <http://www.owl-ontologies.com/geosparql#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix univPDI: <http://vocab.universidadesabiertas.es/ontology/recursos-humanos#PDI> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dct:identifier a owl:DatatypeProperty ;
+    rdfs:label "identifier" ;
+    rdfs:domain univPDI:Universidad ;
+    rdfs:range xsd:string .
+
+schema:birthDate a owl:DatatypeProperty ;
+    rdfs:label "birth date" ;
+    rdfs:domain schema:Person .
+
+schema:familyName a owl:DatatypeProperty ;
+    rdfs:label "family name" ;
+    rdfs:domain schema:Person .
+
+schema:gender a owl:DatatypeProperty ;
+    rdfs:label "gender" ;
+    rdfs:domain schema:Person .
+
+schema:givenName a owl:DatatypeProperty ;
+    rdfs:label "given name" ;
+    rdfs:domain schema:Person .
+
+schema:identifier a owl:DatatypeProperty ;
+    rdfs:label "identifier" ;
+    rdfs:domain schema:Person .
+
+univPDI: a owl:Ontology ;
+    dc:creator "Víctor Morcuende" ;
+    dc:description "Ontology code created by Chowlk" ;
+    dc:title "PDI Ontology" ;
+    owl:versionInfo "0.0.1" .
+
+univPDI:AgregacionPaisesNacionalidad a owl:Class ;
+    rdfs:label "Agregacion Paises Nacionalidad" ;
+    rdfs:subClassOf univPDI:ContinenteNacionalidad .
+
+univPDI:anioExpedicionTituloDoctor a owl:DatatypeProperty ;
+    rdfs:label "anio expedicion titulo doctor" ;
+    rdfs:domain univPDI:PersonalDocenteInvestigador ;
+    rdfs:range xsd:integer .
+
+univPDI:anioIncorporaCuerpoDocente a owl:DatatypeProperty ;
+    rdfs:label "anio incorpora cuerpo docente" ;
+    rdfs:domain univPDI:PersonalDocenteInvestigador ;
+    rdfs:range xsd:integer .
+
+univPDI:anioIncorporacion a owl:DatatypeProperty ;
+    rdfs:label "anio incorporacion" ;
+    rdfs:domain univPDI:PersonalDocenteInvestigador ;
+    rdfs:range xsd:integer .
+
+univPDI:anioIncorporacionAp a owl:DatatypeProperty ;
+    rdfs:label "anio incorporacion ap" ;
+    rdfs:domain univPDI:PersonalDocenteInvestigador ;
+    rdfs:range xsd:integer .
+
+univPDI:anioLecturaTesis a owl:DatatypeProperty ;
+    rdfs:label "anio lectura tesis" ;
+    rdfs:domain univPDI:PersonalDocenteInvestigador ;
+    rdfs:range xsd:integer .
+
+univPDI:anioNacimiento a owl:DatatypeProperty ;
+    rdfs:label "anio nacimiento" ;
+    rdfs:domain univPDI:PersonalDocenteInvestigador ;
+    rdfs:range xsd:integer .
+
+univPDI:categoriaCuerpoEscala a owl:ObjectProperty ;
+    rdfs:label "categoria cuerpo escala" ;
+    rdfs:domain univPDI:PersonalDocenteInvestigador .
+
+univPDI:dedicacion a owl:ObjectProperty ;
+    rdfs:label "dedicacion" ;
+    rdfs:domain univPDI:PersonalDocenteInvestigador .
+
+univPDI:estaAsociadoA a owl:ObjectProperty ;
+    rdfs:label "esta asociado a" ;
+    rdfs:domain univPDI:Anio ;
+    rdfs:range univPDI:Universidad .
+
+univPDI:genero a owl:ObjectProperty ;
+    rdfs:label "genero" ;
+    rdfs:domain univPDI:PersonalDocenteInvestigador .
+
+univPDI:indCargoRemunerado a owl:DatatypeProperty ;
+    rdfs:label "ind cargo remunerado" ;
+    rdfs:domain univPDI:PersonalDocenteInvestigador ;
+    rdfs:range xsd:boolean .
+
+univPDI:indInvestigadorPrincipal a owl:DatatypeProperty ;
+    rdfs:label "ind investigador principal" ;
+    rdfs:domain univPDI:PersonalDocenteInvestigador ;
+    rdfs:range xsd:boolean .
+
+univPDI:mencionEuropea a owl:DatatypeProperty ;
+    rdfs:label "mencion europea" ;
+    rdfs:domain univPDI:PersonalDocenteInvestigador ;
+    rdfs:range xsd:boolean .
+
+univPDI:numHorasSemanalesTiempoParcial a owl:DatatypeProperty ;
+    rdfs:label "num horas semanales tiempo parcial" ;
+    rdfs:domain univPDI:PersonalDocenteInvestigador ;
+    rdfs:range xsd:integer .
+
+univPDI:numQuinquenios a owl:DatatypeProperty ;
+    rdfs:label "num quinquenios" ;
+    rdfs:domain univPDI:PersonalDocenteInvestigador ;
+    rdfs:range xsd:integer .
+
+univPDI:numSexenios a owl:DatatypeProperty ;
+    rdfs:label "num sexenios" ;
+    rdfs:domain univPDI:PersonalDocenteInvestigador ;
+    rdfs:range xsd:integer .
+
+univPDI:numTesis a owl:DatatypeProperty ;
+    rdfs:label "num tesis" ;
+    rdfs:domain univPDI:PersonalDocenteInvestigador ;
+    rdfs:range xsd:integer .
+
+univPDI:numTrienios a owl:DatatypeProperty ;
+    rdfs:label "num trienios" ;
+    rdfs:domain univPDI:PersonalDocenteInvestigador ;
+    rdfs:range xsd:integer .
+
+univPDI:situacionAdministrativa a owl:ObjectProperty ;
+    rdfs:label "situacion administrativa" ;
+    rdfs:domain univPDI:PersonalDocenteInvestigador .
+
+univPDI:tipoContrato a owl:ObjectProperty ;
+    rdfs:label "tipo contrato" ;
+    rdfs:domain univPDI:PersonalDocenteInvestigador .
+
+univPDI:tipoPersonal a owl:ObjectProperty ;
+    rdfs:label "tipo personal" ;
+    rdfs:domain univPDI:PersonalDocenteInvestigador .
+
+univPDI:tipoUnidadResponsable a owl:ObjectProperty ;
+    rdfs:label "tipo unidad responsable" ;
+    rdfs:domain univPDI:UnidadResponsable .
+
+univPDI:tituloDoctorado a owl:ObjectProperty ;
+    rdfs:label "titulo doctorado" ;
+    rdfs:domain univPDI:PersonalDocenteInvestigador .
+
+geo:lat a owl:DatatypeProperty ;
+    rdfs:label "lat" ;
+    rdfs:domain geosparql:Point ;
+    rdfs:range xsd:double .
+
+geo:long a owl:DatatypeProperty ;
+    rdfs:label "long" ;
+    rdfs:domain geosparql:Point ;
+    rdfs:range xsd:double .
+
+geosparql:asWKT a owl:DatatypeProperty ;
+    rdfs:label "as w k t" ;
+    rdfs:domain geosparql:Geometry ;
+    rdfs:range xsd:wKTLiteral .
+
+geosparql:hasGeometry a owl:ObjectProperty ;
+    rdfs:label "has geometry" ;
+    rdfs:domain geosparql:Geometry ;
+    rdfs:range geosparql:Feature .
+
+org:hasSite a owl:ObjectProperty ;
+    rdfs:label "has site" ;
+    rdfs:domain org:Organization ;
+    rdfs:range org:Site .
+
+univPDI:AgregacionPaisesDoctorado a owl:Class ;
+    rdfs:label "Agregacion Paises Doctorado" ;
+    rdfs:subClassOf univPDI:ContinenteDoctorado .
+
+univPDI:Anio a owl:Class ;
+    rdfs:label "Anio" .
+
+univPDI:AreaConocimiento a owl:Class ;
+    rdfs:label "Area Conocimiento" .
+
+univPDI:ComunidadResidencia a owl:Class ;
+    rdfs:label "Comunidad Residencia" .
+
+univPDI:MunicipioResidencia a owl:Class ;
+    rdfs:label "Municipio Residencia" ;
+    rdfs:subClassOf univPDI:ProvinciaResidencia,
+        geosparql:Feature .
+
+univPDI:PaisDoctorado a owl:Class ;
+    rdfs:label "Pais Doctorado" ;
+    rdfs:subClassOf univPDI:ContinenteDoctorado,
+        geosparql:Feature .
+
+univPDI:PaisNacionalidad a owl:Class ;
+    rdfs:label "Pais Nacionalidad" ;
+    rdfs:subClassOf univPDI:ContinenteNacionalidad,
+        geosparql:Feature .
+
+univPDI:estudioEn a owl:ObjectProperty ;
+    rdfs:label "estudio en" ;
+    rdfs:domain univPDI:PersonalDocenteInvestigador ;
+    rdfs:range univPDI:UniversidadDoctorado .
+
+univPDI:formaParteDe a owl:ObjectProperty ;
+    rdfs:label "forma parte de" ;
+    rdfs:domain univPDI:PersonalDocenteInvestigador ;
+    rdfs:range univPDI:AreaConocimiento .
+
+univPDI:perteneceA a owl:ObjectProperty ;
+    rdfs:label "pertenece a" ;
+    rdfs:domain univPDI:PersonalDocenteInvestigador ;
+    rdfs:range univPDI:UnidadResponsable .
+
+univPDI:trabajaEn a owl:ObjectProperty ;
+    rdfs:label "trabaja en" ;
+    rdfs:domain univPDI:PersonalDocenteInvestigador ;
+    rdfs:range univPDI:Universidad .
+
+org:Site a owl:Class ;
+    rdfs:label "Site" ;
+    rdfs:subClassOf geosparql:Feature .
+
+univPDI:ProvinciaResidencia a owl:Class ;
+    rdfs:label "Provincia Residencia" ;
+    rdfs:subClassOf univPDI:ComunidadResidencia .
+
+univPDI:UnidadResponsable a owl:Class ;
+    rdfs:label "Unidad Responsable" .
+
+univPDI:UniversidadDoctorado a owl:Class ;
+    rdfs:label "Universidad Doctorado" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univPDI:estaUbicadaEn ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univPDI:estaUbicadaEn ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univPDI:estaUbicadaEn ],
+        org:Organization .
+
+geosparql:Point a owl:Class ;
+    rdfs:label "Point" ;
+    rdfs:subClassOf geosparql:Geometry .
+
+geosparql:SpatialObject a owl:Class ;
+    rdfs:label "Spatial Object" .
+
+univPDI:ContinenteDoctorado a owl:Class ;
+    rdfs:label "Continente Doctorado" .
+
+univPDI:ContinenteNacionalidad a owl:Class ;
+    rdfs:label "Continente Nacionalidad" .
+
+univPDI:Universidad a owl:Class ;
+    rdfs:label "Universidad" ;
+    rdfs:subClassOf org:Organization .
+
+univPDI:estaUbicadaEn a owl:ObjectProperty ;
+    rdfs:label "esta ubicada en" ;
+    rdfs:domain univPDI:UniversidadDoctorado ;
+    rdfs:range univPDI:AgregacionPaisesDoctorado,
+        univPDI:ContinenteDoctorado,
+        univPDI:PaisDoctorado .
+
+geosparql:Geometry a owl:Class ;
+    rdfs:label "Geometry" ;
+    rdfs:subClassOf geosparql:SpatialObject .
+
+org:Organization a owl:Class ;
+    rdfs:label "Organization" .
+
+geosparql:Feature a owl:Class ;
+    rdfs:label "Feature" ;
+    rdfs:subClassOf geosparql:SpatialObject .
+
+schema:Person a owl:Class ;
+    rdfs:label "Person" .
+
+univPDI:posee a owl:ObjectProperty ;
+    rdfs:label "posee" ;
+    rdfs:domain univPDI:PersonalDocenteInvestigador ;
+    rdfs:range univPDI:ContinenteNacionalidad,
+        univPDI:MunicipioResidencia,
+        univPDI:PaisNacionalidad,
+        univPDI:ProvinciaResidencia .
+
+univPDI:PersonalDocenteInvestigador a owl:Class ;
+    rdfs:label "Personal Docente Investigador" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univPDI:estudioEn ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univPDI:trabajaEn ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univPDI:perteneceA ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univPDI:posee ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univPDI:posee ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univPDI:posee ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univPDI:posee ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univPDI:posee ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univPDI:posee ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univPDI:formaParteDe ],
+        schema:Person .
+
