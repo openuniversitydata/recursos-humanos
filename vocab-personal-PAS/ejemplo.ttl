@@ -1,0 +1,88 @@
+ @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.owl-ontologies.com/geo#> .
+@prefix geosparql: <http://www.owl-ontologies.com/geosparql#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix univPAS: <http://vocab.universidadesabiertas.es/ontology/recursos-humanos#PAS> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+univPAS:Estela_Perez a univPAS:PersonalAdministracionServicios ;
+    univPAS:anioNacimiento "1970"^^xsd:integer ;
+    univPAS:anioIncorporacion "2000"^^xsd:integer ;
+    univPAS:indOtraUnidad "true"^^xsd:boolean ;
+    univPAS:numHorasSemanalesTiempoParcial "25"^^xsd:integer ;
+    univPAS:indCargoRemunerado "true"^^xsd:boolean ;
+    univPAS:indImparteDocencia "false"^^xsd:boolean ;
+    univPAS:numTrienios "3"^^xsd:integer ;
+    univPAS:genero <http://vocab.universidadesabiertas.es/kos/genero/mujer> ;
+    univPAS:dedicacion <http://vocab.universidadesabiertas.es/kos/dedicacion/tiempo-parcial> ;
+    univPAS:tipoContrato <http://vocab.universidadesabiertas.es/kos/tipo-contrato/indefinido> ;
+    univPAS:titulacionExigida <http://vocab.universidadesabiertas.es/kos/titulacion-exigida/bachillerato> ;
+    univPAS:servicioPrestado <http://vocab.universidadesabiertas.es/kos/servicio-prestado/personal-de-mantenimiento-y-servicios> ;
+    univPAS:tipoPersonal <http://vocab.universidadesabiertas.es/kos/tipo-personal/personal-laboral> ;
+    univPAS:cuerpoEscalaPAS <http://vocab.universidadesabiertas.es/kos/cuerpo-escala-PAS/personal-laboral> ;
+    univPAS:situacionAdministrativa <http://vocab.universidadesabiertas.es/kos/situacion-administrativa/servicio-activo> ;
+    univPAS:trabajaEn univPAS:UPM ;
+    univPAS:perteneceA univPAS:Ontology_Engineering_Group ;
+    univPAS:posee univPAS:Espagna ;
+    univPAS:posee univPAS:Europa ;
+    univPAS:posee univPAS:UnionEuropea ;
+    univPAS:posee univPAS:Getafe ;
+    univPAS:posee univPAS:Madrid ;
+    univPAS:posee univPAS:Comunidad_de_Madrid ;
+    rdfs:subClassOf schema:Person .
+    
+univPAS:UPM a univPAS:Universidad ;
+    dct:identifier "025"^^xsd:string ;
+    univPAS:tieneAsociado univPAS:2022 ;
+    rdfs:subClassOf org:Organization .
+
+univPAS:2022 a univPAS:Anio .
+
+univPAS:Ontology_Engineering_Group a univPAS:Unidad ;
+    dct:identifier "025017" .
+
+univPAS:Espagna a univPAS:PaisNacionalidad ;
+    dct:identifier "108" ;
+    rdfs:subClassOf univPAS:ContinenteNacionalidad ;
+    rdfs:subClassOf geosparql:Feature_Espagna .
+
+univPAS:Europa a univPAS:ContinenteNacionalidad ;
+    dct:identifier "01" .
+
+univPAS:UnionEuropea a univPAS:AgregacionPaisesNacionalidad ;
+    dct:identifier "11" ;
+    rdfs:subClassOf univPAS:ContinenteNacionalidad .
+
+univPAS:Getafe a univPAS:MunicipioResidencia ;
+    dct:identifier "065" ;
+    rdfs:subClassOf univPAS:ProvinciaResidencia ;
+    rdfs:subClassOf geosparql:Feature_Getafe .
+
+univPAS:Madrid a univPAS:ProvinciaResidencia ;
+    dct:identifier "28" ;
+    rdfs:subClassOf univPAS:ComunidadResidencia .
+
+univPAS:Comunidad_de_Madrid a univPAS:ComunidadResidencia ;
+    dct:identifier "13" .
+
+geosparql:Feature_Espagna geosparql:hasGeometry geosparql:Geometry_Espagna .
+
+geosparql:Geometry_Espagna a geosparql:Point_Espagna ;
+    geosparql:asWKT "POINT (1.601554,42.546245)"^^geosparql:wktLiteral .
+
+univPAS:Point_Espagna a geosparql:Point ;
+    geo:long "1.601554"^^xsd:double ;
+    geo:lat "42.546245"^^xsd:double .
+
+geosparql:Feature_Getafe geosparql:hasGeometry geosparql:Geometry_Getafe .
+
+geosparql:Geometry_Getafe a geosparql:Point_Getafe ;
+    geosparql:asWKT "POINT (-3.732585,40.308263)"^^geosparql:wktLiteral .
+
+univPAS:Point_Getafe a geosparql:Point ;
+    geo:long "-3.732585"^^xsd:double ;
+    geo:lat "40.308263"^^xsd:double .
