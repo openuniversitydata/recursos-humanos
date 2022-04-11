@@ -1,0 +1,78 @@
+ @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.owl-ontologies.com/geo#> .
+@prefix geosparql: <http://www.owl-ontologies.com/geosparql#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix univPI: <http://vocab.universidadesabiertas.es/ontology/recursos-humanos#PI> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+univPI:Ramon_Sanchez a univPI:PersonalInvestigador ;
+    univPI:anioNacimiento "1974"^^xsd:integer ;
+    univPI:anioIncorporacion "2005"^^xsd:integer ;
+    univPI:anioLecturaTesis "2003"^^xsd:integer ;
+    univPI:anioResolucionConvocatoria "2006"^^xsd:integer ;
+    univPI:duracionMeses "30"^^xsd:integer ;
+    univPI:genero <http://vocab.universidadesabiertas.es/kos/genero/hombre> ;
+    univPI:dedicacion <http://vocab.universidadesabiertas.es/kos/dedicacion/tiempo-completo> ;
+    univPI:tipoOrganismo <http://vocab.universidadesabiertas.es/kos/tipo-organismo/universidad> ;
+    univPI:tituloDoctorado <http://vocab.universidadesabiertas.es/kos/titulo-doctorado/uno> ;
+    univPI:tipoPersonalInvestigacion <http://vocab.universidadesabiertas.es/kos/tipo-personal-investigacion/investigador-ambito-universitario> ;
+    univPI:movilidadPersonalInvestigacion <http://vocab.universidadesabiertas.es/kos/movilidad-personal-investigacion/formacion-personal-investigador> ;
+    univPI:trabajaEn univPI:UPM ;
+    univPI:estudioEn univPI:UCM ;
+    univPI:perteneceA univPI:DATSI ;
+    univPI:formaParteDe univPI:Arquitectura_y_Tecnologia_de_Computadores ;
+    univPI:posee univPI:Espagna ;
+    univPI:posee univPI:Europa ;
+    univPI:posee univPI:UnionEuropea ;
+    rdfs:subClassOf schema:Person .
+    
+univPI:UPM a univPI:Universidad ;
+    dct:identifier "025"^^xsd:string ;
+    univPI:tieneAsociado univPI:2022 ;
+    rdfs:subClassOf org:Organization .
+
+univPI:UCM a univPI:UniversidadDoctorado ;
+    dct:identifier "010"^^xsd:string ;
+    univPI:estaUbicadaEn univPI:Espagna ;
+    univPI:estaUbicadaEn univPI:Europa ;
+    univPI:estaUbicadaEn univPI:UnionEuropea ;
+    rdfs:subClassOf org:Organization .
+
+univPI:2022 a univPI:Anio .
+
+univPI:DATSI a univPI:UnidadResponsable ;
+    dct:identifier "0250003" ;
+    univPI:tipoUnidadResponsable <http://vocab.universidadesabiertas.es/kos/tipo-unidad-responsable/departamento> .
+
+univPI:Arquitectura_y_Tecnologia_de_Computadores a univPI:AreaConocimiento ;
+    dct:identifier "014" .
+
+univPI:Espagna a univPI:PaisNacionalidad ;
+    a univPI:PaisDoctorado ;
+    dct:identifier "108" ;
+    rdfs:subClassOf univPI:ContinenteNacionalidad ;
+    rdfs:subClassOf univPI:ContinenteDoctorado ;
+    rdfs:subClassOf geosparql:Feature_Espagna .
+
+univPI:Europa a univPI:ContinenteNacionalidad ;
+    a univPI:ContinenteDoctorado ;
+    dct:identifier "01" .
+
+univPI:UnionEuropea a univPI:AgregacionPaisesNacionalidad ;
+    a univPI:AgregacionPaisesDoctorado ;
+    dct:identifier "11" ;
+    rdfs:subClassOf univPI:ContinenteNacionalidad ;
+    rdfs:subClassOf univPI:ContinenteDoctorado .
+
+geosparql:Feature_Espagna geosparql:hasGeometry geosparql:Geometry_Espagna .
+
+geosparql:Geometry_Espagna a geosparql:Point_Espagna ;
+    geosparql:asWKT "POINT (1.601554,42.546245)"^^geosparql:wktLiteral .
+
+univPI:Point_Espagna a geosparql:Point ;
+    geo:long "1.601554"^^xsd:double ;
+    geo:lat "42.546245"^^xsd:double .
