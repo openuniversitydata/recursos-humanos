@@ -412,6 +412,8 @@
     <rdfs:range rdf:resource="http://openuniversitydata/def/recursos-humanos#ContinenteNacionalidad"/>
     <rdfs:range rdf:resource="http://openuniversitydata/def/recursos-humanos#MunicipioResidencia"/>
     <rdfs:range rdf:resource="http://openuniversitydata/def/recursos-humanos#PaisNacionalidad"/>
+    <rdfs:range rdf:resource="http://openuniversitydata/def/recursos-humanos#AgregacionPaisesNacionalidad"/>
+    <rdfs:range rdf:resource="http://openuniversitydata/def/recursos-humanos#ComunidadResidencia"/>
     <rdfs:range rdf:resource="http://openuniversitydata/def/recursos-humanos#ProvinciaResidencia"/>
   </owl:ObjectProperty>
 
