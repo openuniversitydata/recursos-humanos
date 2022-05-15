@@ -349,6 +349,8 @@ rrhh:posee a owl:ObjectProperty ;
     rdfs:range rrhh:ContinenteNacionalidad,
         rrhh:MunicipioResidencia,
         rrhh:PaisNacionalidad,
+        rrhh:AgregacionPaisesNacionalidad,
+        rrhh:ComunidadResidencia,
         rrhh:ProvinciaResidencia .
 
 schema:Person a owl:Class ;
