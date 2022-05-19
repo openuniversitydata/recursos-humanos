@@ -46,7 +46,7 @@ mappings:
   triplesMapUnidadresponsable:
     sources:
       - [UC3M-2020.csv~csv]
-    s: http://openuniversitydata/recurso/unidadresponsable/$(des_unidad_responsable)
+    s: http://openuniversitydata/recurso/$(des_unidad_responsable)
     po:
       - [a, orgser:UnidadResponsable]
       - [dct:identifier, $(cod_unidad_responsable)]
