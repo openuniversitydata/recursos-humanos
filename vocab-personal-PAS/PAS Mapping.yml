@@ -1,0 +1,271 @@
+prefixes:
+  xsd: http://www.w3.org/2001/XMLSchema#
+  rr: http://www.w3.org/ns/r2rml#
+  rml: http://semweb.mmlab.be/ns/rml#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  ql: http://semweb.mmlab.be/ns/ql#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  foaf: http://xmlns.com/foaf/0.1/
+  schema: http://schema.org/
+  dc: http://purl.org/dc/elements/1.1/
+  skos: http://www.w3.org/2004/02/skos/core#
+  univ: http://openuniversitydata/def#
+  rrhh: http://openuniversitydata/def/recursos-humanos#
+  geosparql: http://www.owl-ontologies.com/geosparql#
+  org: http://www.w3.org/ns/org#
+  orgser: http://openuniversitydata/def/organizacion-y-servicios#
+  dct: http://purl.org/dc/terms/
+  geo: http://www.owl-ontologies.com/geo#
+
+mappings:
+  triplesMapUniversidad:
+    sources:
+      - [UC3M-2020.csv~csv]
+    s: http://openuniversitydata/recurso/$(des_universidad)
+    po:
+      - [a, univ:Universidad]
+      - [dct:identifier, $(cod_universidad)]
+      - [rdfs:subClassOf, org:Organization]
+      - p: univ:tieneAsociado
+        o:
+        - mapping: triplesMapAnio
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(anio), o]
+              - [str2, $(anio), o]
+
+  triplesMapAnio:
+    sources:
+      - [UC3M-2020.csv~csv]
+    s: http://openuniversitydata/recurso/$(anio)
+    po:
+      - [a, univ:Anio]
+
+  triplesMapAgregacionpaisesnacionalidad:
+    sources:
+      - [UC3M-2020.csv~csv]
+    s: http://openuniversitydata/recurso/$(des_agregacion_paises_nacionalidad)
+    po:
+      - [a, rrhh:AgregacionPaisesNacionalidad]
+      - [dct:identifier, $(cod_agregacion_paises_nacionalidad)]
+      - [rdfs:subClassOf, rrhh:ContinenteNacionalidad]
+
+  triplesMapContinentenacionalidad:
+    sources:
+      - [UC3M-2020.csv~csv]
+    s: http://openuniversitydata/recurso/$(des_continente_nacionalidad)
+    po:
+      - [a, rrhh:ContinenteNacionalidad]
+      - [dct:identifier, $(cod_continente_nacionalidad)]
+
+  triplesMapPersonaladministracionservicios:
+    sources:
+      - [UC3M-2020.csv~csv]
+    s: http://openuniversitydata/recurso/$()
+    po:
+      - [a, rrhh:PersonalAdministracionServicios]
+      - [rrhh:anioIncorporacion, $(anio_incorporacion), xsd:integer]
+      - [rrhh:anioNacimiento, $(anio_nacimiento), xsd:integer]
+      - [rrhh:indCargoRemunerado, $(ind_cargo_remunerado), xsd:boolean]
+      - [rrhh:indImparteDocencia, $(ind_imparte_docencia), xsd:boolean]
+      - [rrhh:indOtraUnidad, $(ind_otra_unidad), xsd:boolean]
+      - [rrhh:numHorasSemanalesTiempoParcial, $(num_horas_semanales_tiempo_parcial), xsd:integer]
+      - [rrhh:numTrienios, $(num_trienios), xsd:integer]
+      - [rrhh:genero, http://openuniversitydata/kos/recursos-humanos/genero/$(des_genero)]
+      - [rrhh:dedicacion, http://openuniversitydata/kos/recursos-humanos/dedicacion/$(des_dedicacion)]
+      - [rrhh:tipoContrato, http://openuniversitydata/kos/recursos-humanos/tipo-contrato/$(des_tipo_contrato)]
+      - [rrhh:titulacionExigida, http://openuniversitydata/kos/recursos-humanos/titulacion-exigida/$(des_titulacion_exigida)]
+      - [rrhh:servicioPrestado, http://openuniversitydata/kos/recursos-humanos/servicio-prestado/$(des_servicio_prestado)]
+      - [rrhh:tipoPersonal, http://openuniversitydata/kos/recursos-humanos/tipo-personal/$(des_tipo_personal)]
+      - [rrhh:cuerpoEscalaPAS, http://openuniversitydata/kos/recursos-humanos/cuerpo-escala-PAS/$(des_cuerpo_escala_PAS)]
+      - [rrhh:situacionAdministrativa, http://openuniversitydata/kos/recursos-humanos/situacion-administrativa/$(des_situacion_administrativa)]
+      - [rdfs:subClassOf, schema:Person]
+      - p: rrhh:ejerceEn
+        o:
+        - mapping: triplesMapOtraunidad
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_otra_unidad), o]
+              - [str2, $(des_otra_unidad), o]
+      - p: rrhh:trabajaEn
+        o:
+        - mapping: triplesMapUniversidad
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_universidad), o]
+              - [str2, $(des_universidad), o]
+      - p: rrhh:posee
+        o:
+        - mapping: triplesMapContinentenacionalidad
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_continente_nacionalidad), o]
+              - [str2, $(des_continente_nacionalidad), o]
+      - p: rrhh:posee
+        o:
+        - mapping: triplesMapMunicipioresidencia
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_municipio_residencia), o]
+              - [str2, $(des_municipio_residencia), o]
+      - p: rrhh:posee
+        o:
+        - mapping: triplesMapPaisnacionalidad
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_pais_nacionalidad), o]
+              - [str2, $(des_pais_nacionalidad), o]
+      - p: rrhh:posee
+        o:
+        - mapping: triplesMapProvinciaresidencia
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_provincia_residencia), o]
+              - [str2, $(des_provincia_residencia), o]
+      - p: rrhh:posee
+        o:
+        - mapping: triplesMapAgregacionpaisesnacionalidad
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_agregacion_paises_nacionalidad), o]
+              - [str2, $(des_agregacion_paises_nacionalidad), o]
+      - p: rrhh:posee
+        o:
+        - mapping: triplesMapComunidadresidencia
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_comunidad_residencia), o]
+              - [str2, $(des_comunidad_residencia), o]
+
+  # triplesMapPerson:
+  #   sources:
+  #     - [UC3M-2020.csv~csv]
+  #   s: http://openuniversitydata/recurso/$()
+  #   po:
+  #     - [a, schema:Person]
+
+  triplesMapPoint:
+    sources:
+      - [UC3M-2020.csv~csv]
+    s: http://openuniversitydata/recurso/$(des_pais_nacionalidad)
+    po:
+      - [a, geosparql:Point]
+      - [geo:lat, $(lat_pais_nacionalidad), xsd:double]
+      - [geo:long, $(lon_pais_nacionalidad), xsd:double]
+      - [rdfs:subClassOf, geosparql:Geometry]
+
+  triplesMapPoint2:
+    sources:
+      - [UC3M-2020.csv~csv]
+    s: http://openuniversitydata/recurso/$(des_municipio_residencia)
+    po:
+      - [a, geosparql:Point]
+      - [geo:lat, $(lat_municipio_residencia), xsd:double]
+      - [geo:long, $(lon_municipio_residencia), xsd:double]
+      - [rdfs:subClassOf, geosparql:Geometry]
+      
+  # triplesMapGeometry:
+  #   sources:
+  #     - [UC3M-2020.csv~csv]
+  #   s: http://openuniversitydata/recurso/($(longitude),$(latitude))
+  #   po:
+  #     - [a, geosparql:Geometry]
+  #     - [geosparql:asWKT, POINT ($(longitude),$(latitude))]
+  #     - p: geosparql:hasGeometry
+  #       o:
+  #       - mapping: triplesMapFeature
+  #         condition:
+  #           function: equal
+  #           parameters:
+  #             - [str1, $()]
+  #             - [str2, $()]
+
+  # triplesMapFeature:
+  #   sources:
+  #     - [UC3M-2020.csv~csv]
+  #   s: http://openuniversitydata/recurso/$()
+  #   po:
+  #     - [a, geosparql:Feature]
+
+  # triplesMapOrganization:
+  #   sources:
+  #     - [UC3M-2020.csv~csv]
+  #   s: http://openuniversitydata/recurso/$(des_universidad)
+  #   po:
+  #     - [a, org:Organization]
+  #     - p: org:hasSite
+  #       o:
+  #       - mapping: triplesMapSite
+  #         condition:
+  #           function: equal
+  #           parameters:
+  #             - [str1, $()]
+  #             - [str2, $()]
+
+  # triplesMapSite:
+  #   sources:
+  #     - [UC3M-2020.csv~csv]
+  #   s: http://openuniversitydata/recurso/$()
+  #   po:
+  #     - [a, org:Site]
+
+  triplesMapOtraunidad:
+    sources:
+      - [UC3M-2020.csv~csv]
+    s: http://openuniversitydata/recurso/$(des_otra_unidad)
+    po:
+      - [a, orgser:OtraUnidad]
+      - [dct:identifier, $(cod_otra_unidad)]
+      - [rdfs:subClassOf, org:Organization]
+
+
+  triplesMapComunidadresidencia:
+    sources:
+      - [UC3M-2020.csv~csv]
+    s: http://openuniversitydata/recurso/$(des_comunidad_residencia)
+    po:
+      - [a, rrhh:ComunidadResidencia]
+      - [dct:identifier, $(cod_comunidad_residencia)]
+
+  triplesMapMunicipioresidencia:
+    sources:
+      - [UC3M-2020.csv~csv]
+    s: http://openuniversitydata/recurso/$(des_municipio_residencia)
+    po:
+      - [a, rrhh:MunicipioResidencia]
+      - [dct:identifier, $(cod_municipio_residencia)]
+      - [rdfs:subClassOf, rrhh:ProvinciaResidencia]
+
+  triplesMapProvinciaresidencia:
+    sources:
+      - [UC3M-2020.csv~csv]
+    s: http://openuniversitydata/recurso/$(des_provincia_residencia)
+    po:
+      - [a, rrhh:ProvinciaResidencia]
+      - [dct:identifier, $(cod_provincia_residencia)]
+      - [rdfs:subClassOf, rrhh:ComunidadResidencia]
+
+  triplesMapPaisnacionalidad:
+    sources:
+      - [UC3M-2020.csv~csv]
+    s: http://openuniversitydata/recurso/$(des_pais_nacionalidad)
+    po:
+      - [a, rrhh:PaisNacionalidad]
+      - [dct:identifier, $(cod_pais_nacionalidad)]
+      - [rdfs:subClassOf, rrhh:ContinenteNacionalidad]
+
+  # triplesMapSpatialobject:
+  #   sources:
+  #     - [UC3M-2020.csv~csv]
+  #   s: http://openuniversitydata/recurso/$()
+  #   po:
+  #     - [a, geosparql:SpatialObject]
