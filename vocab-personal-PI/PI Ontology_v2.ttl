@@ -82,8 +82,8 @@ rrhh:genero a owl:ObjectProperty ;
         )
     ] .
 
-rrhh:movilidadPersonalInvestigacion a owl:ObjectProperty ;
-    rdfs:label "movilidad personal investigacion" ;
+rrhh:modalidadPersonalInvestigacion a owl:ObjectProperty ;
+    rdfs:label "modalidad personal investigacion" ;
     rdfs:domain rrhh:PersonalInvestigador ;
     rdfs:range [
         a owl:Class ;
@@ -328,7 +328,7 @@ _:genid11
 _:genid15
     a owl:Restriction ;
     owl:onProperty skos:inScheme ;
-    owl:hasValue <http://openuniversitydata/kos/recursos-humanos/movilidad-personal-investigacion> .
+    owl:hasValue <http://openuniversitydata/kos/recursos-humanos/modalidad-personal-investigacion> .
 
 _:genid19
     a owl:Restriction ;
