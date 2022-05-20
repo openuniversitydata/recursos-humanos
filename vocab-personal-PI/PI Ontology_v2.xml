@@ -127,8 +127,8 @@
     </rdfs:range>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="http://openuniversitydata/def/recursos-humanos#movilidadPersonalInvestigacion">
-    <rdfs:label>movilidad personal investigacion</rdfs:label>
+  <owl:ObjectProperty rdf:about="http://openuniversitydata/def/recursos-humanos#modalidadPersonalInvestigacion">
+    <rdfs:label>modalidad personal investigacion</rdfs:label>
     <rdfs:domain rdf:resource="http://openuniversitydata/def/recursos-humanos#PersonalInvestigador"/>
     <rdfs:range>
       <owl:Class>
@@ -140,7 +140,7 @@
                 <rdf:first>
                   <owl:Restriction>
                     <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-                    <owl:hasValue rdf:resource="http://openuniversitydata/kos/recursos-humanos/movilidad-personal-investigacion"/>
+                    <owl:hasValue rdf:resource="http://openuniversitydata/kos/recursos-humanos/modalidad-personal-investigacion"/>
                   </owl:Restriction>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
