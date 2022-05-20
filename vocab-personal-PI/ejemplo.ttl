@@ -23,7 +23,7 @@
     rrhh:tipoOrganismo <http://openuniversitydata/kos/recursos-humanos/tipo-organismo/universidad> ;
     rrhh:tituloDoctorado <http://openuniversitydata/kos/recursos-humanos/titulo-doctorado/uno> ;
     rrhh:tipoPersonalInvestigacion <http://openuniversitydata/kos/recursos-humanos/tipo-personal-investigacion/investigador-ambito-universitario> ;
-    rrhh:movilidadPersonalInvestigacion <http://openuniversitydata/kos/recursos-humanos/movilidad-personal-investigacion/formacion-personal-investigador> ;
+    rrhh:modalidadPersonalInvestigacion <http://openuniversitydata/kos/recursos-humanos/modalidad-personal-investigacion/formacion-personal-investigador> ;
     rrhh:trabajaEn <http://openuniversitydata/recurso/UPM> ;
     rrhh:estudioEn <http://openuniversitydata/recurso/UCM> ;
     rrhh:perteneceA <http://openuniversitydata/recurso/DATSI> ;
