@@ -729,4 +729,3 @@
 <http://openuniversitydata/recurso/LA-LASTRILLA> <http://www.owl-ontologies.com/geo#lat> "40.9687"^^<http://www.w3.org/2001/XMLSchema#double>.
 <http://openuniversitydata/recurso/GRINION> <http://www.owl-ontologies.com/geo#lat> "40.21424"^^<http://www.w3.org/2001/XMLSchema#double>.
 <http://openuniversitydata/recurso/PARLA> <http://www.owl-ontologies.com/geo#lat> "40.23754"^^<http://www.w3.org/2001/XMLSchema#double>.
-<http://openuniversitydata/recurso/{}> <http://www.w3.org/2000/01/rdf-schema#subClassOf> "http://schema.org/Person".
