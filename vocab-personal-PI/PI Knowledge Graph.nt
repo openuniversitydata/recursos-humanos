@@ -733,4 +733,3 @@
 <http://openuniversitydata/recurso/Paises-Bajos> <http://www.owl-ontologies.com/geo#lat> "52.132633"^^<http://www.w3.org/2001/XMLSchema#double>.
 <http://openuniversitydata/recurso/Tailandia> <http://www.owl-ontologies.com/geo#lat> "15.870032"^^<http://www.w3.org/2001/XMLSchema#double>.
 <http://openuniversitydata/recurso/Indonesia> <http://www.owl-ontologies.com/geo#lat> "-0.789275"^^<http://www.w3.org/2001/XMLSchema#double>.
-<http://openuniversitydata/recurso/{}> <http://www.w3.org/2000/01/rdf-schema#subClassOf> "http://schema.org/Person".
