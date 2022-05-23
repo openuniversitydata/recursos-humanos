@@ -1,0 +1,1838 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Vocabulary for the representation of university Research Staff (PI)</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://openuniversitydata/def/recursos-humanos#PI/1.0.0","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://openuniversitydata/def/recursos-humanos#PI/1.0.0","name":"Vocabulary for the representation of university Research Staff (PI)", "headline":"The purpose of this vocabulary is to describe in a semantic manner information related to university Research Staff (PI).", "datePublished":"Thu May 12 18:42:31 CEST 2022", "version":"This is the initial version of the ontology of University Research Staff (PI), that has been implemented in the context of a Bachelor Thesis with the aim of creating a knowledge graph containing information about public spanish universities", "license":"http://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Víctor Morcuende"},{"@type":"Person","name":"Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid, Localidata)"}], "contributor":[{"@type":"Person","name":"Víctor Morcuende"},{"@type":"Person","name":"Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid, Localidata)"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-es.html"><b>es</b></a> </div>
+<h1>Vocabulary for the representation of university Research Staff (PI)</h1>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="http://openuniversitydata/def/recursos-humanos#PI/1.0.0">http://openuniversitydata/def/recursos-humanos#PI/1.0.0</a></dd>
+<!-- <dt>Latest version:</dt>
+<dd><a href="http://openuniversitydata/def/recursos-humanos#PI/1.0.0">http://openuniversitydata/def/recursos-humanos#PI/1.0.0</a></dd> -->
+<dt>Revision:</dt>
+<dd>This is the initial version of the ontology of University Research Staff (PI), that has been implemented in the context of a Bachelor Thesis with the aim of creating a knowledge graph containing information about public spanish universities</dd>
+<dt>Authors:</dt>
+<dd>Víctor Morcuende</dd><dd>Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid, Localidata)</dd>
+
+<dt>Contributors:</dt>
+<dd>Víctor Morcuende</dd><dd>Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid, Localidata)</dd>
+
+<dt>Publisher:</dt>
+<dd>Víctor Morcuende</dd>
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-http://creativecommons.org/licenses/by/4.0/-blue.svg" alt="http://creativecommons.org/licenses/by/4.0/" /></a>
+</dd>
+<dt>Cite as:</dt>
+<dd>Víctor Morcuende, Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid, Localidata). Vocabulary for the representation of university Research Staff (PI). Revision: This is the initial version of the ontology of University Research Staff (PI), that has been implemented in the context of a Bachelor Thesis with the aim of creating a knowledge graph containing information about public spanish universities. http://openuniversitydata/def/recursos-humanos#PI/1.0.0</dd>
+</dl>
+<br>
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+The purpose of this vocabulary is to describe in a semantic manner information related to university Research Staff (PI).</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+<div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+   <p>
+      This vocabulary represents information related to university Research Staff (PI). The data used in it comes from a set of public spanish universities, more specifically, 
+      they belong to: the Automonous University of Madrid (UAM), the Carlos III University of Madrid (UC3M), the Complutense University of Madrid (UCM), the King Juan Carlos University (URJC),
+      the University of Valladolid (UVa) and the University of Huelva (UHU). In this way, this vocabulary describes information about the PI, which works in a university, belonging to a 
+      responsible unit as well as a specific knowledge area.
+   </p>
+   <p>
+      Moreover, it uses the <a target="_blank" href="https://datos.ign.es/def/geo_core/index-es.html">geo</a> and 
+      <a target="_blank" href="http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf#">geosparql</a> vocabularies to represent the geographical location of the university where the 
+      PI carries out his work, according to different coordinate reference systems commonly used for this type of data. Additionally, it reuses terms from the 
+      <a target="_blank" href="https://schema.org">schema.org</a> vocabulary for the representation of concepts and relations that are used to describe people. Finally, it also reuses the 
+      <a target="_blank" href="https://www.w3.org/ns/org#">organizations</a> vocabulary to represent the university entity, which gathers all the Research Staff (PI) that work in it.
+   </p>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>univ</b></td><td>&lt;http://openuniversitydata/def#&gt;</td></tr>
+<tr><td><b>rrhh</b></td><td>&lt;http://openuniversitydata/def/recursos-humanos#&gt;</td></tr>
+<tr><td><b>rrhhkos</b></td><td>&lt;http://openuniversitydata/kos/recursos-humanos/&gt;</td></tr>
+<tr><td><b>orgser</b></td><td>&lt;http://openuniversitydata/def/organizacion-y-servicios#&gt;</td></tr>
+<tr><td><b>orgserkos</b></td><td>&lt;http://openuniversitydata/kos/organizacion-y-servicios/&gt;</td></tr>
+<tr><td><b>estud</b></td><td>&lt;http://openuniversitydata/def/estudios-y-estudiantes#&gt;</td></tr>
+<tr><td><b>schema</b></td><td>&lt;http://schema.org/&gt;</td></tr>
+<tr><td><b>org</b></td><td>&lt;http://www.w3.org/ns/org#&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+<tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>geo</b></td><td>&lt;http://www.owl-ontologies.com/geo#&gt;</td></tr>
+<tr><td><b>geosparql</b></td><td>&lt;http://www.owl-ontologies.com/geosparql#&gt;</td></tr>
+<tr><td><b>dct</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace#&gt;</td></tr>
+<tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/elements/1.1/&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Vocabulary for the representation of university Research Staff (PI): Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#http://openuniversitydata/def#AgregacionPaisesDoctorado"
+         title="http://openuniversitydata/def#AgregacionPaisesDoctorado">Agregacion Paises Doctorado</a>
+   </li>
+   <li>
+      <a href="#http://openuniversitydata/def/recursos-humanos#AgregacionPaisesNacionalidad"
+         title="http://openuniversitydata/def/recursos-humanos#AgregacionPaisesNacionalidad">Agregacion Paises Nacionalidad</a>
+   </li>
+   <li>
+      <a href="#http://openuniversitydata/def#Anio" title="http://openuniversitydata/def#Anio">Anio</a>
+   </li>
+   <li>
+      <a href="#http://openuniversitydata/def/estudios-y-estudiantes#AreaConocimiento"
+         title="http://openuniversitydata/def/estudios-y-estudiantes#AreaConocimiento">Area Conocimiento</a>
+   </li>
+   <li>
+      <a href="#http://openuniversitydata/def#ContinenteDoctorado"
+         title="http://openuniversitydata/def#ContinenteDoctorado">Continente Doctorado</a>
+   </li>
+   <li>
+      <a href="#http://openuniversitydata/def/recursos-humanos#ContinenteNacionalidad"
+         title="http://openuniversitydata/def/recursos-humanos#ContinenteNacionalidad">Continente Nacionalidad</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/geosparql#Feature" title="http://www.owl-ontologies.com/geosparql#Feature">Feature</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/geosparql#Geometry" title="http://www.owl-ontologies.com/geosparql#Geometry">Geometry</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/org#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+   </li>
+   <li>
+      <a href="#http://openuniversitydata/def#PaisDoctorado" title="http://openuniversitydata/def#PaisDoctorado">Pais Doctorado</a>
+   </li>
+   <li>
+      <a href="#http://openuniversitydata/def/recursos-humanos#PaisNacionalidad"
+         title="http://openuniversitydata/def/recursos-humanos#PaisNacionalidad">Pais Nacionalidad</a>
+   </li>
+   <li>
+      <a href="#http://schema.org/Person" title="http://schema.org/Person">Person</a>
+   </li>
+   <li>
+      <a href="#http://openuniversitydata/def/recursos-humanos#PersonalInvestigador"
+         title="http://openuniversitydata/def/recursos-humanos#PersonalInvestigador">Personal Investigador</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/geosparql#Point" title="http://www.owl-ontologies.com/geosparql#Point">Point</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/org#Site" title="http://www.w3.org/ns/org#Site">Site</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/geosparql#SpatialObject"
+         title="http://www.owl-ontologies.com/geosparql#SpatialObject">Spatial Object</a>
+   </li>
+   <li>
+      <a href="#http://openuniversitydata/def/organizacion-y-servicios#UnidadResponsable"
+         title="http://openuniversitydata/def/organizacion-y-servicios#UnidadResponsable">Unidad Responsable</a>
+   </li>
+   <li>
+      <a href="#http://openuniversitydata/def#Universidad" title="http://openuniversitydata/def#Universidad">Universidad</a>
+   </li>
+   <li>
+      <a href="#http://openuniversitydata/def#UniversidadDoctorado"
+         title="http://openuniversitydata/def#UniversidadDoctorado">Universidad Doctorado</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#http://www.owl-ontologies.com/geosparql#asWKT" title="http://www.owl-ontologies.com/geosparql#asWKT">
+         <span>as w k t</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://openuniversitydata/def/recursos-humanos#dedicacion"
+         title="http://openuniversitydata/def/recursos-humanos#dedicacion">dedicacion</a>
+   </li>
+   <li>
+      <a href="#http://openuniversitydata/def#estaUbicadaEn" title="http://openuniversitydata/def#estaUbicadaEn">esta ubicada en</a>
+   </li>
+   <li>
+      <a href="#http://openuniversitydata/def/recursos-humanos#estudioEn"
+         title="http://openuniversitydata/def/recursos-humanos#estudioEn">estudio en</a>
+   </li>
+   <li>
+      <a href="#http://openuniversitydata/def/recursos-humanos#formaParteDe"
+         title="http://openuniversitydata/def/recursos-humanos#formaParteDe">forma parte de</a>
+   </li>
+   <li>
+      <a href="#http://openuniversitydata/def/recursos-humanos#genero"
+         title="http://openuniversitydata/def/recursos-humanos#genero">genero</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/geosparql#hasGeometry"
+         title="http://www.owl-ontologies.com/geosparql#hasGeometry">has geometry</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/org#hasSite" title="http://www.w3.org/ns/org#hasSite">has site</a>
+   </li>
+   <li>
+      <a href="#http://openuniversitydata/def/recursos-humanos#modalidadPersonalInvestigacion"
+         title="http://openuniversitydata/def/recursos-humanos#modalidadPersonalInvestigacion">modalidad personal investigacion</a>
+   </li>
+   <li>
+      <a href="#http://openuniversitydata/def/recursos-humanos#perteneceA"
+         title="http://openuniversitydata/def/recursos-humanos#perteneceA">pertenece a</a>
+   </li>
+   <li>
+      <a href="#http://openuniversitydata/def/recursos-humanos#posee"
+         title="http://openuniversitydata/def/recursos-humanos#posee">posee</a>
+   </li>
+   <li>
+      <a href="#http://openuniversitydata/def#tieneAsociado" title="http://openuniversitydata/def#tieneAsociado">tiene asociado</a>
+   </li>
+   <li>
+      <a href="#http://openuniversitydata/def/recursos-humanos#tipoOrganismo"
+         title="http://openuniversitydata/def/recursos-humanos#tipoOrganismo">tipo organismo</a>
+   </li>
+   <li>
+      <a href="#http://openuniversitydata/def/recursos-humanos#tipoPersonalInvestigacion"
+         title="http://openuniversitydata/def/recursos-humanos#tipoPersonalInvestigacion">tipo personal investigacion</a>
+   </li>
+   <li>
+      <a href="#http://openuniversitydata/def/organizacion-y-servicios#tipoUnidadResponsable"
+         title="http://openuniversitydata/def/organizacion-y-servicios#tipoUnidadResponsable">tipo unidad responsable</a>
+   </li>
+   <li>
+      <a href="#http://openuniversitydata/def/recursos-humanos#tituloDoctorado"
+         title="http://openuniversitydata/def/recursos-humanos#tituloDoctorado">titulo doctorado</a>
+   </li>
+   <li>
+      <a href="#http://openuniversitydata/def/recursos-humanos#trabajaEn"
+         title="http://openuniversitydata/def/recursos-humanos#trabajaEn">trabaja en</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#http://openuniversitydata/def/recursos-humanos#anioIncorporacion"
+         title="http://openuniversitydata/def/recursos-humanos#anioIncorporacion">anio incorporacion</a>
+   </li>
+   <li>
+      <a href="#http://openuniversitydata/def/recursos-humanos#anioLecturaTesis"
+         title="http://openuniversitydata/def/recursos-humanos#anioLecturaTesis">anio lectura tesis</a>
+   </li>
+   <li>
+      <a href="#http://openuniversitydata/def/recursos-humanos#anioNacimiento"
+         title="http://openuniversitydata/def/recursos-humanos#anioNacimiento">anio nacimiento</a>
+   </li>
+   <li>
+      <a href="#http://openuniversitydata/def/recursos-humanos#anioResolucionConvocatoria"
+         title="http://openuniversitydata/def/recursos-humanos#anioResolucionConvocatoria">anio resolucion convocatoria</a>
+   </li>
+   <li>
+      <a href="#http://schema.org/birthDate" title="http://schema.org/birthDate">birth date</a>
+   </li>
+   <li>
+      <a href="#http://openuniversitydata/def/recursos-humanos#duracionMeses"
+         title="http://openuniversitydata/def/recursos-humanos#duracionMeses">duracion meses</a>
+   </li>
+   <li>
+      <a href="#http://schema.org/familyName" title="http://schema.org/familyName">family name</a>
+   </li>
+   <li>
+      <a href="#http://schema.org/gender" title="http://schema.org/gender">gender</a>
+   </li>
+   <li>
+      <a href="#http://schema.org/givenName" title="http://schema.org/givenName">given name</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a>
+   </li>
+   <li>
+      <a href="#http://schema.org/identifier" title="http://schema.org/identifier">identifier</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/geo#lat" title="http://www.owl-ontologies.com/geo#lat">lat</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/geo#long" title="http://www.owl-ontologies.com/geo#long">long</a>
+   </li>
+</ul>
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+<div id="description"><h2 id="desc" class="list">Vocabulary for the representation of university Research Staff (PI): Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+   <span class="markdown">Figure 1 shows the classes and properties of the vocabulary that represents the data of university Research Staff (PI):
+   </span>
+   <center>
+      <img src="resources/images/PI Diagrama.png" width="823px" height="670px">
+      <figcaption>Figure 1. Conceptual model for the representation of university Research Staff (PI)</figcaption>
+   </center>
+   <p>
+      As mentioned before, the scope of this vocabulary is the representation of data from university Research Staff (PI). To accomplish this purpose, as it can be seen in 
+      the figure, several classes and properties have been defined in order to describe these data, such as the PersonalInvestigador class, which collects information about his date 
+      of birth, his year of incorporation, the year in which his contract ends and the duration in months of this contract. Furthermore, the PersonalInvestigador class has several SKOS concept 
+      schemes to represent his gender, his dedication, his organization type, the research staff type, the doctorate degree and the research staff mobility. Besides, it is described for each PI his 
+      nationality country (which is also represented by the vocabulary <a target="_blank" href="http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf#">geosparql</a>), continent and 
+      aggregation of countries. Regarding the other classes, the PI works in a university being part of a specific knowledge area during a given year, as well as he also belongs to a 
+      responsible unit, for example, a department. Moreover, if the PI studied a doctorate degree, information about the doctorate university is also collected, such as the nationality of 
+      the country (which is also represented by the vocabulary <a target="_blank" href="http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf#">geosparql</a>), continent and 
+      aggregation of countries where the university is located in. Additionally, it has been reused the vocabulary <a target="_blank" href="https://schema.org/Person">schema:Person</a> to 
+      describe the PI. Finally, it has been also reused the vocabulary of <a target="_blank" href="https://www.w3.org/ns/org#">org:Organization</a> to show how the classes Universidad and 
+      UniversidadDoctorado (in case it exists) have a geographical location, represented by the vocabulary 
+      <a target="_blank" href="http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf#">geosparql</a>.
+   </p>
+   <h3 id="use-examples" class="list">Examples of use</h3>
+   <p>In order to understand the use of some classes and properties in this vocabulary some examples have been provided:</p>
+   <pre>
+      <<!---->http://www.example.org/openuniversitydata/PI/Ramon-Sanchez> a rrhh:PersonalInvestigador ;
+         rrhh:anioNacimiento "1974"^^xsd:integer ;
+         rrhh:anioIncorporacion "2005"^^xsd:integer ;
+         rrhh:anioLecturaTesis "2003"^^xsd:integer ;
+         rrhh:anioResolucionConvocatoria "2006"^^xsd:integer ;
+         rrhh:duracionMeses "30"^^xsd:integer ;
+         rrhh:genero <<!---->http://openuniversitydata/kos/recursos-humanos/genero/hombre> ;
+         rrhh:dedicacion <<!---->http://openuniversitydata/kos/recursos-humanos/dedicacion/tiempo-completo> ;
+         rrhh:tipoOrganismo <<!---->http://openuniversitydata/kos/recursos-humanos/tipo-organismo/universidad> ;
+         rrhh:tituloDoctorado <<!---->http://openuniversitydata/kos/recursos-humanos/titulo-doctorado/uno> ;
+         rrhh:tipoPersonalInvestigacion <<!---->http://openuniversitydata/kos/recursos-humanos/tipo-personal-investigacion/investigador-ambito-universitario> ;
+         rrhh:modalidadPersonalInvestigacion <<!---->http://openuniversitydata/kos/recursos-humanos/modalidad-personal-investigacion/formacion-personal-investigador> ;
+         rrhh:trabajaEn <<!---->http://www.example.org/openuniversitydata/universidad/UPM> ;
+         rrhh:estudioEn <<!---->http://www.example.org/openuniversitydata/universidad/UCM> ;
+         rrhh:perteneceA <<!---->http://www.example.org/openuniversitydata/unidad-responsable/DATSI> ;
+         rrhh:formaParteDe <<!---->http://www.example.org/openuniversitydata/area-conocimiento/Arquitectura-y-Tecnologia-de-Computadores> ;
+         rrhh:posee <<!---->http://www.example.org/openuniversitydata/pais-nacionalidad/Espania> ;
+         rrhh:posee <<!---->http://www.example.org/openuniversitydata/continente-nacionalidad/Europa> ;
+         rrhh:posee <<!---->http://www.example.org/openuniversitydata/agregacion-paises-nacionalidad/Union-Europea> .
+         
+      <<!---->http://www.example.org/openuniversitydata/universidad/UPM> a univ:Universidad ;
+         dct:identifier "025"^^xsd:string ;
+         univ:tieneAsociado <<!---->http://www.example.org/openuniversitydata/curso/2022> .
+   
+      <<!---->http://www.example.org/openuniversitydata/universidad/UCM> a univ:UniversidadDoctorado ;
+         dct:identifier "010"^^xsd:string ;
+         univ:estaUbicadaEn <<!---->http://www.example.org/openuniversitydata/pais-nacionalidad/Espania> ;
+         univ:estaUbicadaEn <<!---->http://www.example.org/openuniversitydata/continente-nacionalidad/Europa> ;
+         univ:estaUbicadaEn <<!---->http://www.example.org/openuniversitydata/agregacion-paises-nacionalidad/Union-Europea> .
+   
+      <<!---->http://www.example.org/openuniversitydata/curso/2022> a univ:Anio .
+   
+      <<!---->http://www.example.org/openuniversitydata/unidad-responsable/DATSI> a orgser:UnidadResponsable ;
+         dct:identifier "0250003" ;
+         orgser:tipoUnidadResponsable <<!---->http://openuniversitydata/kos/organizacion-y-servicios/tipo-unidad-responsable/departamento> .
+   
+      <<!---->http://www.example.org/openuniversitydata/area-conocimiento/Arquitectura-y-Tecnologia-de-Computadores> a estud:AreaConocimiento ;
+         dct:identifier "014" .
+   
+      <<!---->http://www.example.org/openuniversitydata/pais-nacionalidad/Espania> a rrhh:PaisNacionalidad ;
+         a univ:PaisDoctorado ;
+         dct:identifier "108" ;
+         rdfs:subClassOf <<!---->http://www.example.org/openuniversitydata/continente-nacionalidad/Europa> ;
+         org:hasSite <<!---->http://www.example.org/openuniversitydata/point/1.601554;42.546245> .
+   
+      <<!---->http://www.example.org/openuniversitydata/continente-nacionalidad/Europa> a rrhh:ContinenteNacionalidad ;
+         a univ:ContinenteDoctorado ;
+         dct:identifier "01" .
+   
+      <<!---->http://www.example.org/openuniversitydata/agregacion-paises-nacionalidad/Union-Europea> a rrhh:AgregacionPaisesNacionalidad ;
+         a univ:AgregacionPaisesDoctorado ;
+         dct:identifier "11" ;
+         rdfs:subClassOf <<!---->http://www.example.org/openuniversitydata/continente-nacionalidad/Europa> .
+   
+      <<!---->http://www.example.org/openuniversitydata/point/1.601554;42.546245> a geosparql:Point ;
+         geo:long "1.601554"^^xsd:double ;
+         geo:lat "42.546245"^^xsd:double ;
+         geosparql:asWKT "POINT (1.601554 42.546245)"^^geosparql:wktLiteral .
+   </pre>
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Vocabulary for the representation of university Research Staff (PI) classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Vocabulary for the representation of university Research Staff (PI).
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://openuniversitydata/def#AgregacionPaisesDoctorado"
+            title="http://openuniversitydata/def#AgregacionPaisesDoctorado">Agregacion Paises Doctorado</a>
+      </li>
+      <li>
+         <a href="#http://openuniversitydata/def/recursos-humanos#AgregacionPaisesNacionalidad"
+            title="http://openuniversitydata/def/recursos-humanos#AgregacionPaisesNacionalidad">Agregacion Paises Nacionalidad</a>
+      </li>
+      <li>
+         <a href="#http://openuniversitydata/def#Anio" title="http://openuniversitydata/def#Anio">Anio</a>
+      </li>
+      <li>
+         <a href="#http://openuniversitydata/def/estudios-y-estudiantes#AreaConocimiento"
+            title="http://openuniversitydata/def/estudios-y-estudiantes#AreaConocimiento">Area Conocimiento</a>
+      </li>
+      <li>
+         <a href="#http://openuniversitydata/def#ContinenteDoctorado"
+            title="http://openuniversitydata/def#ContinenteDoctorado">Continente Doctorado</a>
+      </li>
+      <li>
+         <a href="#http://openuniversitydata/def/recursos-humanos#ContinenteNacionalidad"
+            title="http://openuniversitydata/def/recursos-humanos#ContinenteNacionalidad">Continente Nacionalidad</a>
+      </li>
+      <li>
+         <a href="#http://www.owl-ontologies.com/geosparql#Feature" title="http://www.owl-ontologies.com/geosparql#Feature">Feature</a>
+      </li>
+      <li>
+         <a href="#http://www.owl-ontologies.com/geosparql#Geometry" title="http://www.owl-ontologies.com/geosparql#Geometry">Geometry</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/org#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+      </li>
+      <li>
+         <a href="#http://openuniversitydata/def#PaisDoctorado" title="http://openuniversitydata/def#PaisDoctorado">Pais Doctorado</a>
+      </li>
+      <li>
+         <a href="#http://openuniversitydata/def/recursos-humanos#PaisNacionalidad"
+            title="http://openuniversitydata/def/recursos-humanos#PaisNacionalidad">Pais Nacionalidad</a>
+      </li>
+      <li>
+         <a href="#http://schema.org/Person" title="http://schema.org/Person">Person</a>
+      </li>
+      <li>
+         <a href="#http://openuniversitydata/def/recursos-humanos#PersonalInvestigador"
+            title="http://openuniversitydata/def/recursos-humanos#PersonalInvestigador">Personal Investigador</a>
+      </li>
+      <li>
+         <a href="#http://www.owl-ontologies.com/geosparql#Point" title="http://www.owl-ontologies.com/geosparql#Point">Point</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/org#Site" title="http://www.w3.org/ns/org#Site">Site</a>
+      </li>
+      <li>
+         <a href="#http://www.owl-ontologies.com/geosparql#SpatialObject"
+            title="http://www.owl-ontologies.com/geosparql#SpatialObject">Spatial Object</a>
+      </li>
+      <li>
+         <a href="#http://openuniversitydata/def/organizacion-y-servicios#UnidadResponsable"
+            title="http://openuniversitydata/def/organizacion-y-servicios#UnidadResponsable">Unidad Responsable</a>
+      </li>
+      <li>
+         <a href="#http://openuniversitydata/def#Universidad" title="http://openuniversitydata/def#Universidad">Universidad</a>
+      </li>
+      <li>
+         <a href="#http://openuniversitydata/def#UniversidadDoctorado"
+            title="http://openuniversitydata/def#UniversidadDoctorado">Universidad Doctorado</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://openuniversitydata/def#AgregacionPaisesDoctorado">
+      <h3>Agregacion Paises Doctorado<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def#AgregacionPaisesDoctorado</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://openuniversitydata/def#ContinenteDoctorado"
+               title="http://openuniversitydata/def#ContinenteDoctorado">Continente Doctorado</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://openuniversitydata/def#estaUbicadaEn" title="http://openuniversitydata/def#estaUbicadaEn">esta ubicada en</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://openuniversitydata/def/recursos-humanos#AgregacionPaisesNacionalidad">
+      <h3>Agregacion Paises Nacionalidad<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def/recursos-humanos#AgregacionPaisesNacionalidad</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://openuniversitydata/def/recursos-humanos#ContinenteNacionalidad"
+               title="http://openuniversitydata/def/recursos-humanos#ContinenteNacionalidad">Continente Nacionalidad</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://openuniversitydata/def/recursos-humanos#posee"
+               title="http://openuniversitydata/def/recursos-humanos#posee">posee</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://openuniversitydata/def#Anio">
+      <h3>Anio<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def#Anio</p>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://openuniversitydata/def#tieneAsociado" title="http://openuniversitydata/def#tieneAsociado">tiene asociado</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://openuniversitydata/def/estudios-y-estudiantes#AreaConocimiento">
+      <h3>Area Conocimiento<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def/estudios-y-estudiantes#AreaConocimiento</p>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://openuniversitydata/def/recursos-humanos#formaParteDe"
+               title="http://openuniversitydata/def/recursos-humanos#formaParteDe">forma parte de</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://openuniversitydata/def#ContinenteDoctorado">
+      <h3>Continente Doctorado<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def#ContinenteDoctorado</p>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://openuniversitydata/def#AgregacionPaisesDoctorado"
+               title="http://openuniversitydata/def#AgregacionPaisesDoctorado">Agregacion Paises Doctorado</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://openuniversitydata/def#PaisDoctorado" title="http://openuniversitydata/def#PaisDoctorado">Pais Doctorado</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://openuniversitydata/def#estaUbicadaEn" title="http://openuniversitydata/def#estaUbicadaEn">esta ubicada en</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://openuniversitydata/def/recursos-humanos#ContinenteNacionalidad">
+      <h3>Continente Nacionalidad<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def/recursos-humanos#ContinenteNacionalidad</p>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://openuniversitydata/def/recursos-humanos#AgregacionPaisesNacionalidad"
+               title="http://openuniversitydata/def/recursos-humanos#AgregacionPaisesNacionalidad">Agregacion Paises Nacionalidad</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://openuniversitydata/def/recursos-humanos#PaisNacionalidad"
+               title="http://openuniversitydata/def/recursos-humanos#PaisNacionalidad">Pais Nacionalidad</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://openuniversitydata/def/recursos-humanos#posee"
+               title="http://openuniversitydata/def/recursos-humanos#posee">posee</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.owl-ontologies.com/geosparql#Feature">
+      <h3>Feature<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.owl-ontologies.com/geosparql#Feature</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.owl-ontologies.com/geosparql#SpatialObject"
+               title="http://www.owl-ontologies.com/geosparql#SpatialObject">Spatial Object</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://openuniversitydata/def#PaisDoctorado" title="http://openuniversitydata/def#PaisDoctorado">Pais Doctorado</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://openuniversitydata/def/recursos-humanos#PaisNacionalidad"
+               title="http://openuniversitydata/def/recursos-humanos#PaisNacionalidad">Pais Nacionalidad</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/ns/org#Site" title="http://www.w3.org/ns/org#Site">Site</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.owl-ontologies.com/geosparql#hasGeometry"
+               title="http://www.owl-ontologies.com/geosparql#hasGeometry">has geometry</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.owl-ontologies.com/geosparql#Geometry">
+      <h3>Geometry<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.owl-ontologies.com/geosparql#Geometry</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.owl-ontologies.com/geosparql#SpatialObject"
+               title="http://www.owl-ontologies.com/geosparql#SpatialObject">Spatial Object</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://www.owl-ontologies.com/geosparql#Point" title="http://www.owl-ontologies.com/geosparql#Point">Point</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://www.owl-ontologies.com/geosparql#asWKT" title="http://www.owl-ontologies.com/geosparql#asWKT">as w k t</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.owl-ontologies.com/geosparql#hasGeometry"
+               title="http://www.owl-ontologies.com/geosparql#hasGeometry">has geometry</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/org#Organization">
+      <h3>Organization<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#Organization</p>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://openuniversitydata/def#Universidad" title="http://openuniversitydata/def#Universidad">Universidad</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://openuniversitydata/def#UniversidadDoctorado"
+               title="http://openuniversitydata/def#UniversidadDoctorado">Universidad Doctorado</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/org#hasSite" title="http://www.w3.org/ns/org#hasSite">has site</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://openuniversitydata/def#PaisDoctorado">
+      <h3>Pais Doctorado<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def#PaisDoctorado</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://openuniversitydata/def#ContinenteDoctorado"
+               title="http://openuniversitydata/def#ContinenteDoctorado">Continente Doctorado</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.owl-ontologies.com/geosparql#Feature" title="http://www.owl-ontologies.com/geosparql#Feature">Feature</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://openuniversitydata/def#estaUbicadaEn" title="http://openuniversitydata/def#estaUbicadaEn">esta ubicada en</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://openuniversitydata/def/recursos-humanos#PaisNacionalidad">
+      <h3>Pais Nacionalidad<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def/recursos-humanos#PaisNacionalidad</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://openuniversitydata/def/recursos-humanos#ContinenteNacionalidad"
+               title="http://openuniversitydata/def/recursos-humanos#ContinenteNacionalidad">Continente Nacionalidad</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.owl-ontologies.com/geosparql#Feature" title="http://www.owl-ontologies.com/geosparql#Feature">Feature</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://openuniversitydata/def/recursos-humanos#posee"
+               title="http://openuniversitydata/def/recursos-humanos#posee">posee</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/Person">
+      <h3>Person<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/Person</p>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://openuniversitydata/def/recursos-humanos#PersonalInvestigador"
+               title="http://openuniversitydata/def/recursos-humanos#PersonalInvestigador">Personal Investigador</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://schema.org/birthDate" title="http://schema.org/birthDate">birth date</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://schema.org/familyName" title="http://schema.org/familyName">family name</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://schema.org/gender" title="http://schema.org/gender">gender</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://schema.org/givenName" title="http://schema.org/givenName">given name</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://schema.org/identifier" title="http://schema.org/identifier">identifier</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://openuniversitydata/def/recursos-humanos#PersonalInvestigador">
+      <h3>Personal Investigador<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def/recursos-humanos#PersonalInvestigador</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://schema.org/Person" title="http://schema.org/Person">Person</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://openuniversitydata/def/recursos-humanos#anioIncorporacion"
+               title="http://openuniversitydata/def/recursos-humanos#anioIncorporacion">anio incorporacion</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://openuniversitydata/def/recursos-humanos#anioLecturaTesis"
+               title="http://openuniversitydata/def/recursos-humanos#anioLecturaTesis">anio lectura tesis</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://openuniversitydata/def/recursos-humanos#anioNacimiento"
+               title="http://openuniversitydata/def/recursos-humanos#anioNacimiento">anio nacimiento</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://openuniversitydata/def/recursos-humanos#anioResolucionConvocatoria"
+               title="http://openuniversitydata/def/recursos-humanos#anioResolucionConvocatoria">anio resolucion convocatoria</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://openuniversitydata/def/recursos-humanos#dedicacion"
+               title="http://openuniversitydata/def/recursos-humanos#dedicacion">dedicacion</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://openuniversitydata/def/recursos-humanos#duracionMeses"
+               title="http://openuniversitydata/def/recursos-humanos#duracionMeses">duracion meses</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://openuniversitydata/def/recursos-humanos#estudioEn"
+               title="http://openuniversitydata/def/recursos-humanos#estudioEn">estudio en</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://openuniversitydata/def/recursos-humanos#formaParteDe"
+               title="http://openuniversitydata/def/recursos-humanos#formaParteDe">forma parte de</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://openuniversitydata/def/recursos-humanos#genero"
+               title="http://openuniversitydata/def/recursos-humanos#genero">genero</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://openuniversitydata/def/recursos-humanos#modalidadPersonalInvestigacion"
+               title="http://openuniversitydata/def/recursos-humanos#modalidadPersonalInvestigacion">modalidad personal investigacion</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://openuniversitydata/def/recursos-humanos#perteneceA"
+               title="http://openuniversitydata/def/recursos-humanos#perteneceA">pertenece a</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://openuniversitydata/def/recursos-humanos#posee"
+               title="http://openuniversitydata/def/recursos-humanos#posee">posee</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://openuniversitydata/def/recursos-humanos#tipoOrganismo"
+               title="http://openuniversitydata/def/recursos-humanos#tipoOrganismo">tipo organismo</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://openuniversitydata/def/recursos-humanos#tipoPersonalInvestigacion"
+               title="http://openuniversitydata/def/recursos-humanos#tipoPersonalInvestigacion">tipo personal investigacion</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://openuniversitydata/def/recursos-humanos#tituloDoctorado"
+               title="http://openuniversitydata/def/recursos-humanos#tituloDoctorado">titulo doctorado</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://openuniversitydata/def/recursos-humanos#trabajaEn"
+               title="http://openuniversitydata/def/recursos-humanos#trabajaEn">trabaja en</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.owl-ontologies.com/geosparql#Point">
+      <h3>Point<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.owl-ontologies.com/geosparql#Point</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.owl-ontologies.com/geosparql#Geometry" title="http://www.owl-ontologies.com/geosparql#Geometry">Geometry</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://www.owl-ontologies.com/geo#lat" title="http://www.owl-ontologies.com/geo#lat">lat</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.owl-ontologies.com/geo#long" title="http://www.owl-ontologies.com/geo#long">long</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/org#Site">
+      <h3>Site<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#Site</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.owl-ontologies.com/geosparql#Feature" title="http://www.owl-ontologies.com/geosparql#Feature">Feature</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/org#hasSite" title="http://www.w3.org/ns/org#hasSite">has site</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.owl-ontologies.com/geosparql#SpatialObject">
+      <h3>Spatial Object<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.owl-ontologies.com/geosparql#SpatialObject</p>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://www.owl-ontologies.com/geosparql#Feature" title="http://www.owl-ontologies.com/geosparql#Feature">Feature</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.owl-ontologies.com/geosparql#Geometry" title="http://www.owl-ontologies.com/geosparql#Geometry">Geometry</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://openuniversitydata/def/organizacion-y-servicios#UnidadResponsable">
+      <h3>Unidad Responsable<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def/organizacion-y-servicios#UnidadResponsable</p>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://openuniversitydata/def/organizacion-y-servicios#tipoUnidadResponsable"
+               title="http://openuniversitydata/def/organizacion-y-servicios#tipoUnidadResponsable">tipo unidad responsable</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://openuniversitydata/def/recursos-humanos#perteneceA"
+               title="http://openuniversitydata/def/recursos-humanos#perteneceA">pertenece a</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://openuniversitydata/def#Universidad">
+      <h3>Universidad<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def#Universidad</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/org#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://openuniversitydata/def#tieneAsociado" title="http://openuniversitydata/def#tieneAsociado">tiene asociado</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://openuniversitydata/def/recursos-humanos#trabajaEn"
+               title="http://openuniversitydata/def/recursos-humanos#trabajaEn">trabaja en</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://openuniversitydata/def#UniversidadDoctorado">
+      <h3>Universidad Doctorado<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def#UniversidadDoctorado</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/org#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://openuniversitydata/def#estaUbicadaEn" title="http://openuniversitydata/def#estaUbicadaEn">esta ubicada en</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://openuniversitydata/def/recursos-humanos#estudioEn"
+               title="http://openuniversitydata/def/recursos-humanos#estudioEn">estudio en</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.owl-ontologies.com/geosparql#asWKT" title="http://www.owl-ontologies.com/geosparql#asWKT">
+            <span>as w k t</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://openuniversitydata/def/recursos-humanos#dedicacion"
+            title="http://openuniversitydata/def/recursos-humanos#dedicacion">dedicacion</a>
+      </li>
+      <li>
+         <a href="#http://openuniversitydata/def#estaUbicadaEn" title="http://openuniversitydata/def#estaUbicadaEn">esta ubicada en</a>
+      </li>
+      <li>
+         <a href="#http://openuniversitydata/def/recursos-humanos#estudioEn"
+            title="http://openuniversitydata/def/recursos-humanos#estudioEn">estudio en</a>
+      </li>
+      <li>
+         <a href="#http://openuniversitydata/def/recursos-humanos#formaParteDe"
+            title="http://openuniversitydata/def/recursos-humanos#formaParteDe">forma parte de</a>
+      </li>
+      <li>
+         <a href="#http://openuniversitydata/def/recursos-humanos#genero"
+            title="http://openuniversitydata/def/recursos-humanos#genero">genero</a>
+      </li>
+      <li>
+         <a href="#http://www.owl-ontologies.com/geosparql#hasGeometry"
+            title="http://www.owl-ontologies.com/geosparql#hasGeometry">has geometry</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/org#hasSite" title="http://www.w3.org/ns/org#hasSite">has site</a>
+      </li>
+      <li>
+         <a href="#http://openuniversitydata/def/recursos-humanos#modalidadPersonalInvestigacion"
+            title="http://openuniversitydata/def/recursos-humanos#modalidadPersonalInvestigacion">modalidad personal investigacion</a>
+      </li>
+      <li>
+         <a href="#http://openuniversitydata/def/recursos-humanos#perteneceA"
+            title="http://openuniversitydata/def/recursos-humanos#perteneceA">pertenece a</a>
+      </li>
+      <li>
+         <a href="#http://openuniversitydata/def/recursos-humanos#posee"
+            title="http://openuniversitydata/def/recursos-humanos#posee">posee</a>
+      </li>
+      <li>
+         <a href="#http://openuniversitydata/def#tieneAsociado" title="http://openuniversitydata/def#tieneAsociado">tiene asociado</a>
+      </li>
+      <li>
+         <a href="#http://openuniversitydata/def/recursos-humanos#tipoOrganismo"
+            title="http://openuniversitydata/def/recursos-humanos#tipoOrganismo">tipo organismo</a>
+      </li>
+      <li>
+         <a href="#http://openuniversitydata/def/recursos-humanos#tipoPersonalInvestigacion"
+            title="http://openuniversitydata/def/recursos-humanos#tipoPersonalInvestigacion">tipo personal investigacion</a>
+      </li>
+      <li>
+         <a href="#http://openuniversitydata/def/organizacion-y-servicios#tipoUnidadResponsable"
+            title="http://openuniversitydata/def/organizacion-y-servicios#tipoUnidadResponsable">tipo unidad responsable</a>
+      </li>
+      <li>
+         <a href="#http://openuniversitydata/def/recursos-humanos#tituloDoctorado"
+            title="http://openuniversitydata/def/recursos-humanos#tituloDoctorado">titulo doctorado</a>
+      </li>
+      <li>
+         <a href="#http://openuniversitydata/def/recursos-humanos#trabajaEn"
+            title="http://openuniversitydata/def/recursos-humanos#trabajaEn">trabaja en</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.owl-ontologies.com/geosparql#asWKT">
+      <h3>as w k t<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.owl-ontologies.com/geosparql#asWKT</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.owl-ontologies.com/geosparql#Geometry" title="http://www.owl-ontologies.com/geosparql#Geometry">Geometry</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#wKTLiteral"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#wKTLiteral">w k t literal</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>data property</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://openuniversitydata/def/recursos-humanos#dedicacion">
+      <h3>dedicacion<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def/recursos-humanos#dedicacion</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://openuniversitydata/def/recursos-humanos#PersonalInvestigador"
+                  title="http://openuniversitydata/def/recursos-humanos#PersonalInvestigador">Personal Investigador</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2004/02/skos/core#Concept"
+                  target="_blank"
+                  title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> (<a href="http://www.w3.org/2004/02/skos/core#inScheme"
+                  target="_blank"
+                  title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">value</span> 
+               <a href="http://openuniversitydata/kos/recursos-humanos/dedicacion"
+                  target="_blank"
+                  title="http://openuniversitydata/kos/recursos-humanos/dedicacion">dedicacion</a>)</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://openuniversitydata/def#estaUbicadaEn">
+      <h3>esta ubicada en<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def#estaUbicadaEn</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://openuniversitydata/def#UniversidadDoctorado"
+                  title="http://openuniversitydata/def#UniversidadDoctorado">Universidad Doctorado</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://openuniversitydata/def#AgregacionPaisesDoctorado"
+                  title="http://openuniversitydata/def#AgregacionPaisesDoctorado">Agregacion Paises Doctorado</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#http://openuniversitydata/def#ContinenteDoctorado"
+                  title="http://openuniversitydata/def#ContinenteDoctorado">Continente Doctorado</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#http://openuniversitydata/def#PaisDoctorado" title="http://openuniversitydata/def#PaisDoctorado">Pais Doctorado</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://openuniversitydata/def/recursos-humanos#estudioEn">
+      <h3>estudio en<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def/recursos-humanos#estudioEn</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://openuniversitydata/def/recursos-humanos#PersonalInvestigador"
+                  title="http://openuniversitydata/def/recursos-humanos#PersonalInvestigador">Personal Investigador</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://openuniversitydata/def#UniversidadDoctorado"
+                  title="http://openuniversitydata/def#UniversidadDoctorado">Universidad Doctorado</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://openuniversitydata/def/recursos-humanos#formaParteDe">
+      <h3>forma parte de<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def/recursos-humanos#formaParteDe</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://openuniversitydata/def/recursos-humanos#PersonalInvestigador"
+                  title="http://openuniversitydata/def/recursos-humanos#PersonalInvestigador">Personal Investigador</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://openuniversitydata/def/estudios-y-estudiantes#AreaConocimiento"
+                  title="http://openuniversitydata/def/estudios-y-estudiantes#AreaConocimiento">Area Conocimiento</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://openuniversitydata/def/recursos-humanos#genero">
+      <h3>genero<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def/recursos-humanos#genero</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://openuniversitydata/def/recursos-humanos#PersonalInvestigador"
+                  title="http://openuniversitydata/def/recursos-humanos#PersonalInvestigador">Personal Investigador</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2004/02/skos/core#Concept"
+                  target="_blank"
+                  title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> (<a href="http://www.w3.org/2004/02/skos/core#inScheme"
+                  target="_blank"
+                  title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">value</span> 
+               <a href="http://openuniversitydata/kos/recursos-humanos/genero"
+                  target="_blank"
+                  title="http://openuniversitydata/kos/recursos-humanos/genero">genero</a>)</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.owl-ontologies.com/geosparql#hasGeometry">
+      <h3>has geometry<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.owl-ontologies.com/geosparql#hasGeometry</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.owl-ontologies.com/geosparql#Geometry" title="http://www.owl-ontologies.com/geosparql#Geometry">Geometry</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.owl-ontologies.com/geosparql#Feature" title="http://www.owl-ontologies.com/geosparql#Feature">Feature</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/org#hasSite">
+      <h3>has site<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#hasSite</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/org#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/org#Site" title="http://www.w3.org/ns/org#Site">Site</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://openuniversitydata/def/recursos-humanos#modalidadPersonalInvestigacion">
+      <h3>modalidad personal investigacion<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def/recursos-humanos#modalidadPersonalInvestigacion</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://openuniversitydata/def/recursos-humanos#PersonalInvestigador"
+                  title="http://openuniversitydata/def/recursos-humanos#PersonalInvestigador">Personal Investigador</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2004/02/skos/core#Concept"
+                  target="_blank"
+                  title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> (<a href="http://www.w3.org/2004/02/skos/core#inScheme"
+                  target="_blank"
+                  title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">value</span> 
+               <a href="http://openuniversitydata/kos/recursos-humanos/modalidad-personal-investigacion"
+                  target="_blank"
+                  title="http://openuniversitydata/kos/recursos-humanos/modalidad-personal-investigacion">modalidad personal investigacion</a>)</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://openuniversitydata/def/recursos-humanos#perteneceA">
+      <h3>pertenece a<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def/recursos-humanos#perteneceA</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://openuniversitydata/def/recursos-humanos#PersonalInvestigador"
+                  title="http://openuniversitydata/def/recursos-humanos#PersonalInvestigador">Personal Investigador</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://openuniversitydata/def/organizacion-y-servicios#UnidadResponsable"
+                  title="http://openuniversitydata/def/organizacion-y-servicios#UnidadResponsable">Unidad Responsable</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://openuniversitydata/def/recursos-humanos#posee">
+      <h3>posee<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def/recursos-humanos#posee</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://openuniversitydata/def/recursos-humanos#PersonalInvestigador"
+                  title="http://openuniversitydata/def/recursos-humanos#PersonalInvestigador">Personal Investigador</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://openuniversitydata/def/recursos-humanos#AgregacionPaisesNacionalidad"
+                  title="http://openuniversitydata/def/recursos-humanos#AgregacionPaisesNacionalidad">Agregacion Paises Nacionalidad</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#http://openuniversitydata/def/recursos-humanos#ContinenteNacionalidad"
+                  title="http://openuniversitydata/def/recursos-humanos#ContinenteNacionalidad">Continente Nacionalidad</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#http://openuniversitydata/def/recursos-humanos#PaisNacionalidad"
+                  title="http://openuniversitydata/def/recursos-humanos#PaisNacionalidad">Pais Nacionalidad</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://openuniversitydata/def#tieneAsociado">
+      <h3>tiene asociado<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def#tieneAsociado</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://openuniversitydata/def#Universidad" title="http://openuniversitydata/def#Universidad">Universidad</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://openuniversitydata/def#Anio" title="http://openuniversitydata/def#Anio">Anio</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://openuniversitydata/def/recursos-humanos#tipoOrganismo">
+      <h3>tipo organismo<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def/recursos-humanos#tipoOrganismo</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://openuniversitydata/def/recursos-humanos#PersonalInvestigador"
+                  title="http://openuniversitydata/def/recursos-humanos#PersonalInvestigador">Personal Investigador</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2004/02/skos/core#Concept"
+                  target="_blank"
+                  title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> (<a href="http://www.w3.org/2004/02/skos/core#inScheme"
+                  target="_blank"
+                  title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">value</span> 
+               <a href="http://openuniversitydata/kos/recursos-humanos/tipo-organismo"
+                  target="_blank"
+                  title="http://openuniversitydata/kos/recursos-humanos/tipo-organismo">tipo organismo</a>)</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://openuniversitydata/def/recursos-humanos#tipoPersonalInvestigacion">
+      <h3>tipo personal investigacion<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def/recursos-humanos#tipoPersonalInvestigacion</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://openuniversitydata/def/recursos-humanos#PersonalInvestigador"
+                  title="http://openuniversitydata/def/recursos-humanos#PersonalInvestigador">Personal Investigador</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2004/02/skos/core#Concept"
+                  target="_blank"
+                  title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> (<a href="http://www.w3.org/2004/02/skos/core#inScheme"
+                  target="_blank"
+                  title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">value</span> 
+               <a href="http://openuniversitydata/kos/recursos-humanos/tipo-personal-investigacion"
+                  target="_blank"
+                  title="http://openuniversitydata/kos/recursos-humanos/tipo-personal-investigacion">tipo personal investigacion</a>)</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://openuniversitydata/def/organizacion-y-servicios#tipoUnidadResponsable">
+      <h3>tipo unidad responsable<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def/organizacion-y-servicios#tipoUnidadResponsable</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://openuniversitydata/def/organizacion-y-servicios#UnidadResponsable"
+                  title="http://openuniversitydata/def/organizacion-y-servicios#UnidadResponsable">Unidad Responsable</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2004/02/skos/core#Concept"
+                  target="_blank"
+                  title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> (<a href="http://www.w3.org/2004/02/skos/core#inScheme"
+                  target="_blank"
+                  title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">value</span> 
+               <a href="http://openuniversitydata/kos/organizacion-y-servicios/tipo-unidad-responsable"
+                  target="_blank"
+                  title="http://openuniversitydata/kos/organizacion-y-servicios/tipo-unidad-responsable">tipo unidad responsable</a>)</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://openuniversitydata/def/recursos-humanos#tituloDoctorado">
+      <h3>titulo doctorado<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def/recursos-humanos#tituloDoctorado</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://openuniversitydata/def/recursos-humanos#PersonalInvestigador"
+                  title="http://openuniversitydata/def/recursos-humanos#PersonalInvestigador">Personal Investigador</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2004/02/skos/core#Concept"
+                  target="_blank"
+                  title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> (<a href="http://www.w3.org/2004/02/skos/core#inScheme"
+                  target="_blank"
+                  title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">value</span> 
+               <a href="http://openuniversitydata/kos/recursos-humanos/titulo-doctorado"
+                  target="_blank"
+                  title="http://openuniversitydata/kos/recursos-humanos/titulo-doctorado">titulo doctorado</a>)</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://openuniversitydata/def/recursos-humanos#trabajaEn">
+      <h3>trabaja en<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def/recursos-humanos#trabajaEn</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://openuniversitydata/def/recursos-humanos#PersonalInvestigador"
+                  title="http://openuniversitydata/def/recursos-humanos#PersonalInvestigador">Personal Investigador</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://openuniversitydata/def#Universidad" title="http://openuniversitydata/def#Universidad">Universidad</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://openuniversitydata/def/recursos-humanos#anioIncorporacion"
+            title="http://openuniversitydata/def/recursos-humanos#anioIncorporacion">anio incorporacion</a>
+      </li>
+      <li>
+         <a href="#http://openuniversitydata/def/recursos-humanos#anioLecturaTesis"
+            title="http://openuniversitydata/def/recursos-humanos#anioLecturaTesis">anio lectura tesis</a>
+      </li>
+      <li>
+         <a href="#http://openuniversitydata/def/recursos-humanos#anioNacimiento"
+            title="http://openuniversitydata/def/recursos-humanos#anioNacimiento">anio nacimiento</a>
+      </li>
+      <li>
+         <a href="#http://openuniversitydata/def/recursos-humanos#anioResolucionConvocatoria"
+            title="http://openuniversitydata/def/recursos-humanos#anioResolucionConvocatoria">anio resolucion convocatoria</a>
+      </li>
+      <li>
+         <a href="#http://schema.org/birthDate" title="http://schema.org/birthDate">birth date</a>
+      </li>
+      <li>
+         <a href="#http://openuniversitydata/def/recursos-humanos#duracionMeses"
+            title="http://openuniversitydata/def/recursos-humanos#duracionMeses">duracion meses</a>
+      </li>
+      <li>
+         <a href="#http://schema.org/familyName" title="http://schema.org/familyName">family name</a>
+      </li>
+      <li>
+         <a href="#http://schema.org/gender" title="http://schema.org/gender">gender</a>
+      </li>
+      <li>
+         <a href="#http://schema.org/givenName" title="http://schema.org/givenName">given name</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a>
+      </li>
+      <li>
+         <a href="#http://schema.org/identifier" title="http://schema.org/identifier">identifier</a>
+      </li>
+      <li>
+         <a href="#http://www.owl-ontologies.com/geo#lat" title="http://www.owl-ontologies.com/geo#lat">lat</a>
+      </li>
+      <li>
+         <a href="#http://www.owl-ontologies.com/geo#long" title="http://www.owl-ontologies.com/geo#long">long</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://openuniversitydata/def/recursos-humanos#anioIncorporacion">
+      <h3>anio incorporacion<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def/recursos-humanos#anioIncorporacion</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://openuniversitydata/def/recursos-humanos#PersonalInvestigador"
+                  title="http://openuniversitydata/def/recursos-humanos#PersonalInvestigador">Personal Investigador</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://openuniversitydata/def/recursos-humanos#anioLecturaTesis">
+      <h3>anio lectura tesis<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def/recursos-humanos#anioLecturaTesis</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://openuniversitydata/def/recursos-humanos#PersonalInvestigador"
+                  title="http://openuniversitydata/def/recursos-humanos#PersonalInvestigador">Personal Investigador</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://openuniversitydata/def/recursos-humanos#anioNacimiento">
+      <h3>anio nacimiento<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def/recursos-humanos#anioNacimiento</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://openuniversitydata/def/recursos-humanos#PersonalInvestigador"
+                  title="http://openuniversitydata/def/recursos-humanos#PersonalInvestigador">Personal Investigador</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://openuniversitydata/def/recursos-humanos#anioResolucionConvocatoria">
+      <h3>anio resolucion convocatoria<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def/recursos-humanos#anioResolucionConvocatoria</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://openuniversitydata/def/recursos-humanos#PersonalInvestigador"
+                  title="http://openuniversitydata/def/recursos-humanos#PersonalInvestigador">Personal Investigador</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://schema.org/birthDate">
+      <h3>birth date<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/birthDate</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://schema.org/Person" title="http://schema.org/Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://openuniversitydata/def/recursos-humanos#duracionMeses">
+      <h3>duracion meses<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://openuniversitydata/def/recursos-humanos#duracionMeses</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://openuniversitydata/def/recursos-humanos#PersonalInvestigador"
+                  title="http://openuniversitydata/def/recursos-humanos#PersonalInvestigador">Personal Investigador</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://schema.org/familyName">
+      <h3>family name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/familyName</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://schema.org/Person" title="http://schema.org/Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://schema.org/gender">
+      <h3>gender<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/gender</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://schema.org/Person" title="http://schema.org/Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://schema.org/givenName">
+      <h3>given name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/givenName</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://schema.org/Person" title="http://schema.org/Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/identifier">
+      <h3>identifier<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/identifier</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://openuniversitydata/def#Universidad" title="http://openuniversitydata/def#Universidad">Universidad</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://schema.org/identifier">
+      <h3>identifier<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/identifier</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://schema.org/Person" title="http://schema.org/Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.owl-ontologies.com/geo#lat">
+      <h3>lat<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.owl-ontologies.com/geo#lat</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.owl-ontologies.com/geosparql#Point" title="http://www.owl-ontologies.com/geosparql#Point">Point</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#double"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#double">double</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.owl-ontologies.com/geo#long">
+      <h3>long<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.owl-ontologies.com/geo#long</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.owl-ontologies.com/geosparql#Point" title="http://www.owl-ontologies.com/geosparql#Point">Point</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#double"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#double">double</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>
