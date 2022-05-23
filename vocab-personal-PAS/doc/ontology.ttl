@@ -1,0 +1,475 @@
+@prefix : <http://openuniversitydata/def#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://openuniversitydata/def#> .
+
+<http://openuniversitydata/def#> rdf:type owl:Ontology ;
+                                  <http://purl.org/dc/elements/1.1/creator> "Víctor Morcuende" ;
+                                  <http://purl.org/dc/elements/1.1/description> "Ontology code created by Chowlk" ;
+                                  <http://purl.org/dc/elements/1.1/title> "PAS Ontology" ;
+                                  owl:versionInfo "0.0.2" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://openuniversitydata/def#tieneAsociado
+:tieneAsociado rdf:type owl:ObjectProperty ;
+               rdfs:domain :Universidad ;
+               rdfs:range :Anio ;
+               rdfs:label "tiene asociado" .
+
+
+###  http://openuniversitydata/def/recursos-humanos#cuerpoEscalaPAS
+<http://openuniversitydata/def/recursos-humanos#cuerpoEscalaPAS> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:domain <http://openuniversitydata/def/recursos-humanos#PersonalAdministracionServicios> ;
+                                                                 rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                     owl:hasValue <http://openuniversitydata/kos/recursos-humanos/cuerpo-escala-PAS>
+                                                                                                   ]
+                                                                                                 ) ;
+                                                                              rdf:type owl:Class
+                                                                            ] ;
+                                                                 rdfs:label "cuerpo escala p a s" .
+
+
+###  http://openuniversitydata/def/recursos-humanos#dedicacion
+<http://openuniversitydata/def/recursos-humanos#dedicacion> rdf:type owl:ObjectProperty ;
+                                                            rdfs:domain <http://openuniversitydata/def/recursos-humanos#PersonalAdministracionServicios> ;
+                                                            rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                owl:hasValue <http://openuniversitydata/kos/recursos-humanos/dedicacion>
+                                                                                              ]
+                                                                                            ) ;
+                                                                         rdf:type owl:Class
+                                                                       ] ;
+                                                            rdfs:label "dedicacion" .
+
+
+###  http://openuniversitydata/def/recursos-humanos#ejerceEn
+<http://openuniversitydata/def/recursos-humanos#ejerceEn> rdf:type owl:ObjectProperty ;
+                                                          rdfs:domain <http://openuniversitydata/def/recursos-humanos#PersonalAdministracionServicios> ;
+                                                          rdfs:range <http://openuniversitydata/def/organizacion-y-servicios#OtraUnidad> ;
+                                                          rdfs:label "ejerce en" .
+
+
+###  http://openuniversitydata/def/recursos-humanos#genero
+<http://openuniversitydata/def/recursos-humanos#genero> rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain <http://openuniversitydata/def/recursos-humanos#PersonalAdministracionServicios> ;
+                                                        rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                            owl:hasValue <http://openuniversitydata/kos/recursos-humanos/genero>
+                                                                                          ]
+                                                                                        ) ;
+                                                                     rdf:type owl:Class
+                                                                   ] ;
+                                                        rdfs:label "genero" .
+
+
+###  http://openuniversitydata/def/recursos-humanos#posee
+<http://openuniversitydata/def/recursos-humanos#posee> rdf:type owl:ObjectProperty ;
+                                                       rdfs:domain <http://openuniversitydata/def/recursos-humanos#PersonalAdministracionServicios> ;
+                                                       rdfs:range <http://openuniversitydata/def/recursos-humanos#ContinenteNacionalidad> ,
+                                                                  <http://openuniversitydata/def/recursos-humanos#MunicipioResidencia> ,
+                                                                  <http://openuniversitydata/def/recursos-humanos#PaisNacionalidad> ,
+                                                                  <http://openuniversitydata/def/recursos-humanos#ProvinciaResidencia> ;
+                                                       rdfs:label "posee" .
+
+
+###  http://openuniversitydata/def/recursos-humanos#servicioPrestado
+<http://openuniversitydata/def/recursos-humanos#servicioPrestado> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:domain <http://openuniversitydata/def/recursos-humanos#PersonalAdministracionServicios> ;
+                                                                  rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                      owl:hasValue <http://openuniversitydata/kos/recursos-humanos/servicio-prestado>
+                                                                                                    ]
+                                                                                                  ) ;
+                                                                               rdf:type owl:Class
+                                                                             ] ;
+                                                                  rdfs:label "servicio prestado" .
+
+
+###  http://openuniversitydata/def/recursos-humanos#situacionAdministrativa
+<http://openuniversitydata/def/recursos-humanos#situacionAdministrativa> rdf:type owl:ObjectProperty ;
+                                                                         rdfs:domain <http://openuniversitydata/def/recursos-humanos#PersonalAdministracionServicios> ;
+                                                                         rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                           [ rdf:type owl:Restriction ;
+                                                                                                             owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                             owl:hasValue <http://openuniversitydata/kos/recursos-humanos/situacion-administrativa>
+                                                                                                           ]
+                                                                                                         ) ;
+                                                                                      rdf:type owl:Class
+                                                                                    ] ;
+                                                                         rdfs:label "situacion administrativa" .
+
+
+###  http://openuniversitydata/def/recursos-humanos#tipoContrato
+<http://openuniversitydata/def/recursos-humanos#tipoContrato> rdf:type owl:ObjectProperty ;
+                                                              rdfs:domain <http://openuniversitydata/def/recursos-humanos#PersonalAdministracionServicios> ;
+                                                              rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                  owl:hasValue <http://openuniversitydata/kos/recursos-humanos/tipo-contrato>
+                                                                                                ]
+                                                                                              ) ;
+                                                                           rdf:type owl:Class
+                                                                         ] ;
+                                                              rdfs:label "tipo contrato" .
+
+
+###  http://openuniversitydata/def/recursos-humanos#tipoPersonal
+<http://openuniversitydata/def/recursos-humanos#tipoPersonal> rdf:type owl:ObjectProperty ;
+                                                              rdfs:domain <http://openuniversitydata/def/recursos-humanos#PersonalAdministracionServicios> ;
+                                                              rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                  owl:hasValue <http://openuniversitydata/kos/recursos-humanos/tipo-personal>
+                                                                                                ]
+                                                                                              ) ;
+                                                                           rdf:type owl:Class
+                                                                         ] ;
+                                                              rdfs:label "tipo personal" .
+
+
+###  http://openuniversitydata/def/recursos-humanos#titulacionExigida
+<http://openuniversitydata/def/recursos-humanos#titulacionExigida> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:domain <http://openuniversitydata/def/recursos-humanos#PersonalAdministracionServicios> ;
+                                                                   rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                       owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                       owl:hasValue <http://openuniversitydata/kos/recursos-humanos/titulacion-exigida>
+                                                                                                     ]
+                                                                                                   ) ;
+                                                                                rdf:type owl:Class
+                                                                              ] ;
+                                                                   rdfs:label "titulacion exigida" .
+
+
+###  http://openuniversitydata/def/recursos-humanos#trabajaEn
+<http://openuniversitydata/def/recursos-humanos#trabajaEn> rdf:type owl:ObjectProperty ;
+                                                           rdfs:domain <http://openuniversitydata/def/recursos-humanos#PersonalAdministracionServicios> ;
+                                                           rdfs:range :Universidad ;
+                                                           rdfs:label "trabaja en" .
+
+
+###  http://www.owl-ontologies.com/geosparql#asWKT
+<http://www.owl-ontologies.com/geosparql#asWKT> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <http://www.owl-ontologies.com/geosparql#Geometry> ;
+                                                rdfs:range xsd:wKTLiteral .
+
+
+###  http://www.owl-ontologies.com/geosparql#hasGeometry
+<http://www.owl-ontologies.com/geosparql#hasGeometry> rdf:type owl:ObjectProperty ;
+                                                      rdfs:domain <http://www.owl-ontologies.com/geosparql#Geometry> ;
+                                                      rdfs:range <http://www.owl-ontologies.com/geosparql#Feature> ;
+                                                      rdfs:label "has geometry" .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/org#hasSite
+<http://www.w3.org/ns/org#hasSite> rdf:type owl:ObjectProperty ;
+                                   rdfs:domain <http://www.w3.org/ns/org#Organization> ;
+                                   rdfs:range <http://www.w3.org/ns/org#Site> ;
+                                   rdfs:label "has site" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://openuniversitydata/def/recursos-humanos#anioIncorporacion
+<http://openuniversitydata/def/recursos-humanos#anioIncorporacion> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:domain <http://openuniversitydata/def/recursos-humanos#PersonalAdministracionServicios> ;
+                                                                   rdfs:range xsd:integer ;
+                                                                   rdfs:label "anio incorporacion" .
+
+
+###  http://openuniversitydata/def/recursos-humanos#anioNacimiento
+<http://openuniversitydata/def/recursos-humanos#anioNacimiento> rdf:type owl:DatatypeProperty ;
+                                                                rdfs:domain <http://openuniversitydata/def/recursos-humanos#PersonalAdministracionServicios> ;
+                                                                rdfs:range xsd:integer ;
+                                                                rdfs:label "anio nacimiento" .
+
+
+###  http://openuniversitydata/def/recursos-humanos#indCargoRemunerado
+<http://openuniversitydata/def/recursos-humanos#indCargoRemunerado> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:domain <http://openuniversitydata/def/recursos-humanos#PersonalAdministracionServicios> ;
+                                                                    rdfs:range xsd:boolean ;
+                                                                    rdfs:label "ind cargo remunerado" .
+
+
+###  http://openuniversitydata/def/recursos-humanos#indImparteDocencia
+<http://openuniversitydata/def/recursos-humanos#indImparteDocencia> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:domain <http://openuniversitydata/def/recursos-humanos#PersonalAdministracionServicios> ;
+                                                                    rdfs:range xsd:boolean ;
+                                                                    rdfs:label "ind imparte docencia" .
+
+
+###  http://openuniversitydata/def/recursos-humanos#indOtraUnidad
+<http://openuniversitydata/def/recursos-humanos#indOtraUnidad> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:domain <http://openuniversitydata/def/recursos-humanos#PersonalAdministracionServicios> ;
+                                                               rdfs:range xsd:boolean ;
+                                                               rdfs:label "ind otra unidad" .
+
+
+###  http://openuniversitydata/def/recursos-humanos#numHorasSemanalesTiempoParcial
+<http://openuniversitydata/def/recursos-humanos#numHorasSemanalesTiempoParcial> rdf:type owl:DatatypeProperty ;
+                                                                                rdfs:domain <http://openuniversitydata/def/recursos-humanos#PersonalAdministracionServicios> ;
+                                                                                rdfs:range xsd:integer ;
+                                                                                rdfs:label "num horas semanales tiempo parcial" .
+
+
+###  http://openuniversitydata/def/recursos-humanos#numTrienios
+<http://openuniversitydata/def/recursos-humanos#numTrienios> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:domain <http://openuniversitydata/def/recursos-humanos#PersonalAdministracionServicios> ;
+                                                             rdfs:range xsd:integer ;
+                                                             rdfs:label "num trienios" .
+
+
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain :Universidad ;
+                                      rdfs:range xsd:string ;
+                                      rdfs:label "identifier" .
+
+
+###  http://schema.org/birthDate
+<http://schema.org/birthDate> rdf:type owl:DatatypeProperty ;
+                              rdfs:domain <http://schema.org/Person> ;
+                              rdfs:label "birth date" .
+
+
+###  http://schema.org/familyName
+<http://schema.org/familyName> rdf:type owl:DatatypeProperty ;
+                               rdfs:domain <http://schema.org/Person> ;
+                               rdfs:label "family name" .
+
+
+###  http://schema.org/gender
+<http://schema.org/gender> rdf:type owl:DatatypeProperty ;
+                           rdfs:domain <http://schema.org/Person> ;
+                           rdfs:label "gender" .
+
+
+###  http://schema.org/givenName
+<http://schema.org/givenName> rdf:type owl:DatatypeProperty ;
+                              rdfs:domain <http://schema.org/Person> ;
+                              rdfs:label "given name" .
+
+
+###  http://schema.org/identifier
+<http://schema.org/identifier> rdf:type owl:DatatypeProperty ;
+                               rdfs:domain <http://schema.org/Person> ;
+                               rdfs:label "identifier" .
+
+
+###  http://www.owl-ontologies.com/geo#lat
+<http://www.owl-ontologies.com/geo#lat> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain <http://www.owl-ontologies.com/geosparql#Point> ;
+                                        rdfs:range xsd:double ;
+                                        rdfs:label "lat" .
+
+
+###  http://www.owl-ontologies.com/geo#long
+<http://www.owl-ontologies.com/geo#long> rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain <http://www.owl-ontologies.com/geosparql#Point> ;
+                                         rdfs:range xsd:double ;
+                                         rdfs:label "long" .
+
+
+###  http://www.owl-ontologies.com/geosparql#asWKT
+<http://www.owl-ontologies.com/geosparql#asWKT> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://openuniversitydata/def#Anio
+:Anio rdf:type owl:Class ;
+      rdfs:label "Anio" .
+
+
+###  http://openuniversitydata/def#Universidad
+:Universidad rdf:type owl:Class ;
+             rdfs:subClassOf <http://www.w3.org/ns/org#Organization> ;
+             rdfs:label "Universidad" .
+
+
+###  http://openuniversitydata/def/organizacion-y-servicios#OtraUnidad
+<http://openuniversitydata/def/organizacion-y-servicios#OtraUnidad> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.w3.org/ns/org#Organization> ;
+                                                                    rdfs:label "Otra Unidad" .
+
+
+###  http://openuniversitydata/def/recursos-humanos#AgregacionPaisesNacionalidad
+<http://openuniversitydata/def/recursos-humanos#AgregacionPaisesNacionalidad> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://openuniversitydata/def/recursos-humanos#ContinenteNacionalidad> ;
+                                                                              rdfs:label "Agregacion Paises Nacionalidad" .
+
+
+###  http://openuniversitydata/def/recursos-humanos#ComunidadResidencia
+<http://openuniversitydata/def/recursos-humanos#ComunidadResidencia> rdf:type owl:Class ;
+                                                                     rdfs:label "Comunidad Residencia" .
+
+
+###  http://openuniversitydata/def/recursos-humanos#ContinenteNacionalidad
+<http://openuniversitydata/def/recursos-humanos#ContinenteNacionalidad> rdf:type owl:Class ;
+                                                                        rdfs:label "Continente Nacionalidad" .
+
+
+###  http://openuniversitydata/def/recursos-humanos#MunicipioResidencia
+<http://openuniversitydata/def/recursos-humanos#MunicipioResidencia> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://openuniversitydata/def/recursos-humanos#ProvinciaResidencia> ,
+                                                                                     <http://www.owl-ontologies.com/geosparql#Feature> ;
+                                                                     rdfs:label "Municipio Residencia" .
+
+
+###  http://openuniversitydata/def/recursos-humanos#PaisNacionalidad
+<http://openuniversitydata/def/recursos-humanos#PaisNacionalidad> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://openuniversitydata/def/recursos-humanos#ContinenteNacionalidad> ,
+                                                                                  <http://www.owl-ontologies.com/geosparql#Feature> ;
+                                                                  rdfs:label "Pais Nacionalidad" .
+
+
+###  http://openuniversitydata/def/recursos-humanos#PersonalAdministracionServicios
+<http://openuniversitydata/def/recursos-humanos#PersonalAdministracionServicios> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://schema.org/Person> ,
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty <http://openuniversitydata/def/recursos-humanos#trabajaEn> ;
+                                                                                                   owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                 ] ,
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty <http://openuniversitydata/def/recursos-humanos#ejerceEn> ;
+                                                                                                   owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                                                 ] ,
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty <http://openuniversitydata/def/recursos-humanos#posee> ;
+                                                                                                   owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                                                 ] ;
+                                                                                 rdfs:label "Personal Administracion Servicios" .
+
+
+###  http://openuniversitydata/def/recursos-humanos#ProvinciaResidencia
+<http://openuniversitydata/def/recursos-humanos#ProvinciaResidencia> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://openuniversitydata/def/recursos-humanos#ComunidadResidencia> ;
+                                                                     rdfs:label "Provincia Residencia" .
+
+
+###  http://schema.org/Person
+<http://schema.org/Person> rdf:type owl:Class ;
+                           rdfs:label "Person" .
+
+
+###  http://www.owl-ontologies.com/geosparql#Feature
+<http://www.owl-ontologies.com/geosparql#Feature> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://www.owl-ontologies.com/geosparql#SpatialObject> ;
+                                                  rdfs:label "Feature" .
+
+
+###  http://www.owl-ontologies.com/geosparql#Geometry
+<http://www.owl-ontologies.com/geosparql#Geometry> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://www.owl-ontologies.com/geosparql#SpatialObject> ;
+                                                   rdfs:label "Geometry" .
+
+
+###  http://www.owl-ontologies.com/geosparql#Point
+<http://www.owl-ontologies.com/geosparql#Point> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.owl-ontologies.com/geosparql#Geometry> ;
+                                                rdfs:label "Point" .
+
+
+###  http://www.owl-ontologies.com/geosparql#SpatialObject
+<http://www.owl-ontologies.com/geosparql#SpatialObject> rdf:type owl:Class ;
+                                                        rdfs:label "Spatial Object" .
+
+
+###  http://www.w3.org/2001/XMLSchema#wKTLiteral
+xsd:wKTLiteral rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/org#Organization
+<http://www.w3.org/ns/org#Organization> rdf:type owl:Class ;
+                                        rdfs:label "Organization" .
+
+
+###  http://www.w3.org/ns/org#Site
+<http://www.w3.org/ns/org#Site> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://www.owl-ontologies.com/geosparql#Feature> ;
+                                rdfs:label "Site" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://openuniversitydata/kos/recursos-humanos/cuerpo-escala-PAS
+<http://openuniversitydata/kos/recursos-humanos/cuerpo-escala-PAS> rdf:type owl:NamedIndividual .
+
+
+###  http://openuniversitydata/kos/recursos-humanos/dedicacion
+<http://openuniversitydata/kos/recursos-humanos/dedicacion> rdf:type owl:NamedIndividual .
+
+
+###  http://openuniversitydata/kos/recursos-humanos/genero
+<http://openuniversitydata/kos/recursos-humanos/genero> rdf:type owl:NamedIndividual .
+
+
+###  http://openuniversitydata/kos/recursos-humanos/servicio-prestado
+<http://openuniversitydata/kos/recursos-humanos/servicio-prestado> rdf:type owl:NamedIndividual .
+
+
+###  http://openuniversitydata/kos/recursos-humanos/situacion-administrativa
+<http://openuniversitydata/kos/recursos-humanos/situacion-administrativa> rdf:type owl:NamedIndividual .
+
+
+###  http://openuniversitydata/kos/recursos-humanos/tipo-contrato
+<http://openuniversitydata/kos/recursos-humanos/tipo-contrato> rdf:type owl:NamedIndividual .
+
+
+###  http://openuniversitydata/kos/recursos-humanos/tipo-personal
+<http://openuniversitydata/kos/recursos-humanos/tipo-personal> rdf:type owl:NamedIndividual .
+
+
+###  http://openuniversitydata/kos/recursos-humanos/titulacion-exigida
+<http://openuniversitydata/kos/recursos-humanos/titulacion-exigida> rdf:type owl:NamedIndividual .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://www.owl-ontologies.com/geosparql#asWKT> rdfs:label "as w k t" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
