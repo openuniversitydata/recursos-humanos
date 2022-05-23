@@ -1,0 +1,562 @@
+<http://openuniversitydata/def#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://openuniversitydata/def#> <http://purl.org/dc/elements/1.1/creator> "Víctor Morcuende" .
+<http://openuniversitydata/def#> <http://purl.org/dc/elements/1.1/description> "Ontology code created by Chowlk" .
+<http://openuniversitydata/def#> <http://purl.org/dc/elements/1.1/title> "PDI Ontology" .
+<http://openuniversitydata/def#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.2" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://openuniversitydata/def#estaUbicadaEn
+<http://openuniversitydata/def#estaUbicadaEn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def#estaUbicadaEn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def#UniversidadDoctorado> .
+<http://openuniversitydata/def#estaUbicadaEn> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def#AgregacionPaisesDoctorado> .
+<http://openuniversitydata/def#estaUbicadaEn> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def#ContinenteDoctorado> .
+<http://openuniversitydata/def#estaUbicadaEn> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def#PaisDoctorado> .
+<http://openuniversitydata/def#estaUbicadaEn> <http://www.w3.org/2000/01/rdf-schema#label> "esta ubicada en" .
+# 
+# http://openuniversitydata/def#tieneAsociado
+<http://openuniversitydata/def#tieneAsociado> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def#tieneAsociado> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def#Universidad> .
+<http://openuniversitydata/def#tieneAsociado> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def#Anio> .
+<http://openuniversitydata/def#tieneAsociado> <http://www.w3.org/2000/01/rdf-schema#label> "tiene asociado" .
+# 
+# http://openuniversitydata/def/organizacion-y-servicios#tipoUnidadResponsable
+<http://openuniversitydata/def/organizacion-y-servicios#tipoUnidadResponsable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def/organizacion-y-servicios#tipoUnidadResponsable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/organizacion-y-servicios#UnidadResponsable> .
+<http://openuniversitydata/def/organizacion-y-servicios#tipoUnidadResponsable> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#hasValue> <http://openuniversitydata/kos/organizacion-y-servicios/tipo-unidad-responsable> .
+<http://openuniversitydata/kos/organizacion-y-servicios/tipo-unidad-responsable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://openuniversitydata/def/organizacion-y-servicios#tipoUnidadResponsable> <http://www.w3.org/2000/01/rdf-schema#label> "tipo unidad responsable" .
+# 
+# http://openuniversitydata/def/recursos-humanos#categoriaCuerpoEscala
+<http://openuniversitydata/def/recursos-humanos#categoriaCuerpoEscala> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def/recursos-humanos#categoriaCuerpoEscala> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> .
+<http://openuniversitydata/def/recursos-humanos#categoriaCuerpoEscala> <http://www.w3.org/2000/01/rdf-schema#range> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid5 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#hasValue> <http://openuniversitydata/kos/recursos-humanos/categoria-cuerpo-escala> .
+<http://openuniversitydata/kos/recursos-humanos/categoria-cuerpo-escala> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://openuniversitydata/def/recursos-humanos#categoriaCuerpoEscala> <http://www.w3.org/2000/01/rdf-schema#label> "categoria cuerpo escala" .
+# 
+# http://openuniversitydata/def/recursos-humanos#dedicacion
+<http://openuniversitydata/def/recursos-humanos#dedicacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def/recursos-humanos#dedicacion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> .
+<http://openuniversitydata/def/recursos-humanos#dedicacion> <http://www.w3.org/2000/01/rdf-schema#range> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid9 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#hasValue> <http://openuniversitydata/kos/recursos-humanos/dedicacion> .
+<http://openuniversitydata/kos/recursos-humanos/dedicacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://openuniversitydata/def/recursos-humanos#dedicacion> <http://www.w3.org/2000/01/rdf-schema#label> "dedicacion" .
+# 
+# http://openuniversitydata/def/recursos-humanos#estudioEn
+<http://openuniversitydata/def/recursos-humanos#estudioEn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def/recursos-humanos#estudioEn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> .
+<http://openuniversitydata/def/recursos-humanos#estudioEn> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def#UniversidadDoctorado> .
+<http://openuniversitydata/def/recursos-humanos#estudioEn> <http://www.w3.org/2000/01/rdf-schema#label> "estudio en" .
+# 
+# http://openuniversitydata/def/recursos-humanos#formaParteDe
+<http://openuniversitydata/def/recursos-humanos#formaParteDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def/recursos-humanos#formaParteDe> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> .
+<http://openuniversitydata/def/recursos-humanos#formaParteDe> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def/estudios-y-estudiantes#AreaConocimiento> .
+<http://openuniversitydata/def/recursos-humanos#formaParteDe> <http://www.w3.org/2000/01/rdf-schema#label> "forma parte de" .
+# 
+# http://openuniversitydata/def/recursos-humanos#genero
+<http://openuniversitydata/def/recursos-humanos#genero> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def/recursos-humanos#genero> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> .
+<http://openuniversitydata/def/recursos-humanos#genero> <http://www.w3.org/2000/01/rdf-schema#range> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid13 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#hasValue> <http://openuniversitydata/kos/recursos-humanos/genero> .
+<http://openuniversitydata/kos/recursos-humanos/genero> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://openuniversitydata/def/recursos-humanos#genero> <http://www.w3.org/2000/01/rdf-schema#label> "genero" .
+# 
+# http://openuniversitydata/def/recursos-humanos#perteneceA
+<http://openuniversitydata/def/recursos-humanos#perteneceA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def/recursos-humanos#perteneceA> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> .
+<http://openuniversitydata/def/recursos-humanos#perteneceA> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def/organizacion-y-servicios#UnidadResponsable> .
+<http://openuniversitydata/def/recursos-humanos#perteneceA> <http://www.w3.org/2000/01/rdf-schema#label> "pertenece a" .
+# 
+# http://openuniversitydata/def/recursos-humanos#posee
+<http://openuniversitydata/def/recursos-humanos#posee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def/recursos-humanos#posee> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> .
+<http://openuniversitydata/def/recursos-humanos#posee> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def/recursos-humanos#ContinenteNacionalidad> .
+<http://openuniversitydata/def/recursos-humanos#posee> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def/recursos-humanos#MunicipioResidencia> .
+<http://openuniversitydata/def/recursos-humanos#posee> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def/recursos-humanos#PaisNacionalidad> .
+<http://openuniversitydata/def/recursos-humanos#posee> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def/recursos-humanos#ProvinciaResidencia> .
+<http://openuniversitydata/def/recursos-humanos#posee> <http://www.w3.org/2000/01/rdf-schema#label> "posee" .
+# 
+# http://openuniversitydata/def/recursos-humanos#situacionAdministrativa
+<http://openuniversitydata/def/recursos-humanos#situacionAdministrativa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def/recursos-humanos#situacionAdministrativa> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> .
+<http://openuniversitydata/def/recursos-humanos#situacionAdministrativa> <http://www.w3.org/2000/01/rdf-schema#range> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid17 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#hasValue> <http://openuniversitydata/kos/recursos-humanos/situacion-administrativa> .
+<http://openuniversitydata/kos/recursos-humanos/situacion-administrativa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://openuniversitydata/def/recursos-humanos#situacionAdministrativa> <http://www.w3.org/2000/01/rdf-schema#label> "situacion administrativa" .
+# 
+# http://openuniversitydata/def/recursos-humanos#tipoContrato
+<http://openuniversitydata/def/recursos-humanos#tipoContrato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def/recursos-humanos#tipoContrato> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> .
+<http://openuniversitydata/def/recursos-humanos#tipoContrato> <http://www.w3.org/2000/01/rdf-schema#range> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid21 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid23 .
+_:genid23 <http://www.w3.org/2002/07/owl#hasValue> <http://openuniversitydata/kos/recursos-humanos/tipo-contrato> .
+<http://openuniversitydata/kos/recursos-humanos/tipo-contrato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://openuniversitydata/def/recursos-humanos#tipoContrato> <http://www.w3.org/2000/01/rdf-schema#label> "tipo contrato" .
+# 
+# http://openuniversitydata/def/recursos-humanos#tipoPersonal
+<http://openuniversitydata/def/recursos-humanos#tipoPersonal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def/recursos-humanos#tipoPersonal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> .
+<http://openuniversitydata/def/recursos-humanos#tipoPersonal> <http://www.w3.org/2000/01/rdf-schema#range> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid25 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid27 .
+_:genid27 <http://www.w3.org/2002/07/owl#hasValue> <http://openuniversitydata/kos/recursos-humanos/tipo-personal> .
+<http://openuniversitydata/kos/recursos-humanos/tipo-personal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://openuniversitydata/def/recursos-humanos#tipoPersonal> <http://www.w3.org/2000/01/rdf-schema#label> "tipo personal" .
+# 
+# http://openuniversitydata/def/recursos-humanos#tituloDoctorado
+<http://openuniversitydata/def/recursos-humanos#tituloDoctorado> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def/recursos-humanos#tituloDoctorado> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> .
+<http://openuniversitydata/def/recursos-humanos#tituloDoctorado> <http://www.w3.org/2000/01/rdf-schema#range> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid29 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid31 .
+_:genid31 <http://www.w3.org/2002/07/owl#hasValue> <http://openuniversitydata/kos/recursos-humanos/titulo-doctorado> .
+<http://openuniversitydata/kos/recursos-humanos/titulo-doctorado> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://openuniversitydata/def/recursos-humanos#tituloDoctorado> <http://www.w3.org/2000/01/rdf-schema#label> "titulo doctorado" .
+# 
+# http://openuniversitydata/def/recursos-humanos#trabajaEn
+<http://openuniversitydata/def/recursos-humanos#trabajaEn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def/recursos-humanos#trabajaEn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> .
+<http://openuniversitydata/def/recursos-humanos#trabajaEn> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def#Universidad> .
+<http://openuniversitydata/def/recursos-humanos#trabajaEn> <http://www.w3.org/2000/01/rdf-schema#label> "trabaja en" .
+# 
+# http://www.owl-ontologies.com/geosparql#asWKT
+<http://www.owl-ontologies.com/geosparql#asWKT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/geosparql#asWKT> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/geosparql#Geometry> .
+<http://www.owl-ontologies.com/geosparql#asWKT> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#wKTLiteral> .
+<http://www.w3.org/2001/XMLSchema#wKTLiteral> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.owl-ontologies.com/geosparql#hasGeometry
+<http://www.owl-ontologies.com/geosparql#hasGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/geosparql#Geometry> .
+<http://www.owl-ontologies.com/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/geosparql#Feature> .
+<http://www.owl-ontologies.com/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#label> "has geometry" .
+# 
+# http://www.w3.org/2004/02/skos/core#inScheme
+# 
+# http://www.w3.org/ns/org#hasSite
+<http://www.w3.org/ns/org#hasSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/org#hasSite> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/org#Organization> .
+<http://www.w3.org/ns/org#hasSite> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/org#Site> .
+<http://www.w3.org/ns/org#hasSite> <http://www.w3.org/2000/01/rdf-schema#label> "has site" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://openuniversitydata/def/recursos-humanos#anioExpedicionTituloDoctor
+<http://openuniversitydata/def/recursos-humanos#anioExpedicionTituloDoctor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://openuniversitydata/def/recursos-humanos#anioExpedicionTituloDoctor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> .
+<http://openuniversitydata/def/recursos-humanos#anioExpedicionTituloDoctor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://openuniversitydata/def/recursos-humanos#anioExpedicionTituloDoctor> <http://www.w3.org/2000/01/rdf-schema#label> "anio expedicion titulo doctor" .
+# 
+# http://openuniversitydata/def/recursos-humanos#anioIncorporaCuerpoDocente
+<http://openuniversitydata/def/recursos-humanos#anioIncorporaCuerpoDocente> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://openuniversitydata/def/recursos-humanos#anioIncorporaCuerpoDocente> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> .
+<http://openuniversitydata/def/recursos-humanos#anioIncorporaCuerpoDocente> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://openuniversitydata/def/recursos-humanos#anioIncorporaCuerpoDocente> <http://www.w3.org/2000/01/rdf-schema#label> "anio incorpora cuerpo docente" .
+# 
+# http://openuniversitydata/def/recursos-humanos#anioIncorporacion
+<http://openuniversitydata/def/recursos-humanos#anioIncorporacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://openuniversitydata/def/recursos-humanos#anioIncorporacion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> .
+<http://openuniversitydata/def/recursos-humanos#anioIncorporacion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://openuniversitydata/def/recursos-humanos#anioIncorporacion> <http://www.w3.org/2000/01/rdf-schema#label> "anio incorporacion" .
+# 
+# http://openuniversitydata/def/recursos-humanos#anioIncorporacionAp
+<http://openuniversitydata/def/recursos-humanos#anioIncorporacionAp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://openuniversitydata/def/recursos-humanos#anioIncorporacionAp> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> .
+<http://openuniversitydata/def/recursos-humanos#anioIncorporacionAp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://openuniversitydata/def/recursos-humanos#anioIncorporacionAp> <http://www.w3.org/2000/01/rdf-schema#label> "anio incorporacion ap" .
+# 
+# http://openuniversitydata/def/recursos-humanos#anioLecturaTesis
+<http://openuniversitydata/def/recursos-humanos#anioLecturaTesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://openuniversitydata/def/recursos-humanos#anioLecturaTesis> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> .
+<http://openuniversitydata/def/recursos-humanos#anioLecturaTesis> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://openuniversitydata/def/recursos-humanos#anioLecturaTesis> <http://www.w3.org/2000/01/rdf-schema#label> "anio lectura tesis" .
+# 
+# http://openuniversitydata/def/recursos-humanos#anioNacimiento
+<http://openuniversitydata/def/recursos-humanos#anioNacimiento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://openuniversitydata/def/recursos-humanos#anioNacimiento> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> .
+<http://openuniversitydata/def/recursos-humanos#anioNacimiento> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://openuniversitydata/def/recursos-humanos#anioNacimiento> <http://www.w3.org/2000/01/rdf-schema#label> "anio nacimiento" .
+# 
+# http://openuniversitydata/def/recursos-humanos#indCargoRemunerado
+<http://openuniversitydata/def/recursos-humanos#indCargoRemunerado> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://openuniversitydata/def/recursos-humanos#indCargoRemunerado> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> .
+<http://openuniversitydata/def/recursos-humanos#indCargoRemunerado> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://openuniversitydata/def/recursos-humanos#indCargoRemunerado> <http://www.w3.org/2000/01/rdf-schema#label> "ind cargo remunerado" .
+# 
+# http://openuniversitydata/def/recursos-humanos#indInvestigadorPrincipal
+<http://openuniversitydata/def/recursos-humanos#indInvestigadorPrincipal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://openuniversitydata/def/recursos-humanos#indInvestigadorPrincipal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> .
+<http://openuniversitydata/def/recursos-humanos#indInvestigadorPrincipal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://openuniversitydata/def/recursos-humanos#indInvestigadorPrincipal> <http://www.w3.org/2000/01/rdf-schema#label> "ind investigador principal" .
+# 
+# http://openuniversitydata/def/recursos-humanos#mencionEuropea
+<http://openuniversitydata/def/recursos-humanos#mencionEuropea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://openuniversitydata/def/recursos-humanos#mencionEuropea> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> .
+<http://openuniversitydata/def/recursos-humanos#mencionEuropea> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://openuniversitydata/def/recursos-humanos#mencionEuropea> <http://www.w3.org/2000/01/rdf-schema#label> "mencion europea" .
+# 
+# http://openuniversitydata/def/recursos-humanos#numHorasSemanalesTiempoParcial
+<http://openuniversitydata/def/recursos-humanos#numHorasSemanalesTiempoParcial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://openuniversitydata/def/recursos-humanos#numHorasSemanalesTiempoParcial> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> .
+<http://openuniversitydata/def/recursos-humanos#numHorasSemanalesTiempoParcial> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://openuniversitydata/def/recursos-humanos#numHorasSemanalesTiempoParcial> <http://www.w3.org/2000/01/rdf-schema#label> "num horas semanales tiempo parcial" .
+# 
+# http://openuniversitydata/def/recursos-humanos#numQuinquenios
+<http://openuniversitydata/def/recursos-humanos#numQuinquenios> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://openuniversitydata/def/recursos-humanos#numQuinquenios> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> .
+<http://openuniversitydata/def/recursos-humanos#numQuinquenios> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://openuniversitydata/def/recursos-humanos#numQuinquenios> <http://www.w3.org/2000/01/rdf-schema#label> "num quinquenios" .
+# 
+# http://openuniversitydata/def/recursos-humanos#numSexenios
+<http://openuniversitydata/def/recursos-humanos#numSexenios> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://openuniversitydata/def/recursos-humanos#numSexenios> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> .
+<http://openuniversitydata/def/recursos-humanos#numSexenios> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://openuniversitydata/def/recursos-humanos#numSexenios> <http://www.w3.org/2000/01/rdf-schema#label> "num sexenios" .
+# 
+# http://openuniversitydata/def/recursos-humanos#numTesis
+<http://openuniversitydata/def/recursos-humanos#numTesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://openuniversitydata/def/recursos-humanos#numTesis> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> .
+<http://openuniversitydata/def/recursos-humanos#numTesis> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://openuniversitydata/def/recursos-humanos#numTesis> <http://www.w3.org/2000/01/rdf-schema#label> "num tesis" .
+# 
+# http://openuniversitydata/def/recursos-humanos#numTrienios
+<http://openuniversitydata/def/recursos-humanos#numTrienios> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://openuniversitydata/def/recursos-humanos#numTrienios> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> .
+<http://openuniversitydata/def/recursos-humanos#numTrienios> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://openuniversitydata/def/recursos-humanos#numTrienios> <http://www.w3.org/2000/01/rdf-schema#label> "num trienios" .
+# 
+# http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def#Universidad> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier" .
+# 
+# http://schema.org/birthDate
+<http://schema.org/birthDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/birthDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Person> .
+<http://schema.org/birthDate> <http://www.w3.org/2000/01/rdf-schema#label> "birth date" .
+# 
+# http://schema.org/familyName
+<http://schema.org/familyName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/familyName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Person> .
+<http://schema.org/familyName> <http://www.w3.org/2000/01/rdf-schema#label> "family name" .
+# 
+# http://schema.org/gender
+<http://schema.org/gender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/gender> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Person> .
+<http://schema.org/gender> <http://www.w3.org/2000/01/rdf-schema#label> "gender" .
+# 
+# http://schema.org/givenName
+<http://schema.org/givenName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/givenName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Person> .
+<http://schema.org/givenName> <http://www.w3.org/2000/01/rdf-schema#label> "given name" .
+# 
+# http://schema.org/identifier
+<http://schema.org/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/identifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Person> .
+<http://schema.org/identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier" .
+# 
+# http://www.owl-ontologies.com/geo#lat
+<http://www.owl-ontologies.com/geo#lat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/geo#lat> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/geosparql#Point> .
+<http://www.owl-ontologies.com/geo#lat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://www.owl-ontologies.com/geo#lat> <http://www.w3.org/2000/01/rdf-schema#label> "lat" .
+# 
+# http://www.owl-ontologies.com/geo#long
+<http://www.owl-ontologies.com/geo#long> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/geo#long> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/geosparql#Point> .
+<http://www.owl-ontologies.com/geo#long> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://www.owl-ontologies.com/geo#long> <http://www.w3.org/2000/01/rdf-schema#label> "long" .
+# 
+# http://www.owl-ontologies.com/geosparql#asWKT
+<http://www.owl-ontologies.com/geosparql#asWKT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://openuniversitydata/def#AgregacionPaisesDoctorado
+<http://openuniversitydata/def#AgregacionPaisesDoctorado> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def#AgregacionPaisesDoctorado> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://openuniversitydata/def#ContinenteDoctorado> .
+<http://openuniversitydata/def#AgregacionPaisesDoctorado> <http://www.w3.org/2000/01/rdf-schema#label> "Agregacion Paises Doctorado" .
+# 
+# http://openuniversitydata/def#Anio
+<http://openuniversitydata/def#Anio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def#Anio> <http://www.w3.org/2000/01/rdf-schema#label> "Anio" .
+# 
+# http://openuniversitydata/def#ContinenteDoctorado
+<http://openuniversitydata/def#ContinenteDoctorado> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def#ContinenteDoctorado> <http://www.w3.org/2000/01/rdf-schema#label> "Continente Doctorado" .
+# 
+# http://openuniversitydata/def#PaisDoctorado
+<http://openuniversitydata/def#PaisDoctorado> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def#PaisDoctorado> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://openuniversitydata/def#ContinenteDoctorado> .
+<http://openuniversitydata/def#PaisDoctorado> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/geosparql#Feature> .
+<http://openuniversitydata/def#PaisDoctorado> <http://www.w3.org/2000/01/rdf-schema#label> "Pais Doctorado" .
+# 
+# http://openuniversitydata/def#Universidad
+<http://openuniversitydata/def#Universidad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def#Universidad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#Organization> .
+<http://openuniversitydata/def#Universidad> <http://www.w3.org/2000/01/rdf-schema#label> "Universidad" .
+# 
+# http://openuniversitydata/def#UniversidadDoctorado
+<http://openuniversitydata/def#UniversidadDoctorado> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def#UniversidadDoctorado> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#Organization> .
+<http://openuniversitydata/def#UniversidadDoctorado> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
+_:genid33 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <http://openuniversitydata/def#estaUbicadaEn> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://openuniversitydata/def#UniversidadDoctorado> <http://www.w3.org/2000/01/rdf-schema#label> "Universidad Doctorado" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#AreaConocimiento
+<http://openuniversitydata/def/estudios-y-estudiantes#AreaConocimiento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def/estudios-y-estudiantes#AreaConocimiento> <http://www.w3.org/2000/01/rdf-schema#label> "Area Conocimiento" .
+# 
+# http://openuniversitydata/def/organizacion-y-servicios#UnidadResponsable
+<http://openuniversitydata/def/organizacion-y-servicios#UnidadResponsable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def/organizacion-y-servicios#UnidadResponsable> <http://www.w3.org/2000/01/rdf-schema#label> "Unidad Responsable" .
+# 
+# http://openuniversitydata/def/recursos-humanos#AgregacionPaisesNacionalidad
+<http://openuniversitydata/def/recursos-humanos#AgregacionPaisesNacionalidad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def/recursos-humanos#AgregacionPaisesNacionalidad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://openuniversitydata/def/recursos-humanos#ContinenteNacionalidad> .
+<http://openuniversitydata/def/recursos-humanos#AgregacionPaisesNacionalidad> <http://www.w3.org/2000/01/rdf-schema#label> "Agregacion Paises Nacionalidad" .
+# 
+# http://openuniversitydata/def/recursos-humanos#ComunidadResidencia
+<http://openuniversitydata/def/recursos-humanos#ComunidadResidencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def/recursos-humanos#ComunidadResidencia> <http://www.w3.org/2000/01/rdf-schema#label> "Comunidad Residencia" .
+# 
+# http://openuniversitydata/def/recursos-humanos#ContinenteNacionalidad
+<http://openuniversitydata/def/recursos-humanos#ContinenteNacionalidad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def/recursos-humanos#ContinenteNacionalidad> <http://www.w3.org/2000/01/rdf-schema#label> "Continente Nacionalidad" .
+# 
+# http://openuniversitydata/def/recursos-humanos#MunicipioResidencia
+<http://openuniversitydata/def/recursos-humanos#MunicipioResidencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def/recursos-humanos#MunicipioResidencia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://openuniversitydata/def/recursos-humanos#ProvinciaResidencia> .
+<http://openuniversitydata/def/recursos-humanos#MunicipioResidencia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/geosparql#Feature> .
+<http://openuniversitydata/def/recursos-humanos#MunicipioResidencia> <http://www.w3.org/2000/01/rdf-schema#label> "Municipio Residencia" .
+# 
+# http://openuniversitydata/def/recursos-humanos#PaisNacionalidad
+<http://openuniversitydata/def/recursos-humanos#PaisNacionalidad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def/recursos-humanos#PaisNacionalidad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://openuniversitydata/def/recursos-humanos#ContinenteNacionalidad> .
+<http://openuniversitydata/def/recursos-humanos#PaisNacionalidad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/geosparql#Feature> .
+<http://openuniversitydata/def/recursos-humanos#PaisNacionalidad> <http://www.w3.org/2000/01/rdf-schema#label> "Pais Nacionalidad" .
+# 
+# http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador
+<http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Person> .
+<http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
+_:genid34 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <http://openuniversitydata/def/recursos-humanos#trabajaEn> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
+_:genid35 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <http://openuniversitydata/def/recursos-humanos#estudioEn> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
+_:genid36 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <http://openuniversitydata/def/recursos-humanos#formaParteDe> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
+_:genid37 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://openuniversitydata/def/recursos-humanos#perteneceA> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
+_:genid38 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <http://openuniversitydata/def/recursos-humanos#posee> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://openuniversitydata/def/recursos-humanos#PersonalDocenteInvestigador> <http://www.w3.org/2000/01/rdf-schema#label> "Personal Docente Investigador" .
+# 
+# http://openuniversitydata/def/recursos-humanos#ProvinciaResidencia
+<http://openuniversitydata/def/recursos-humanos#ProvinciaResidencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def/recursos-humanos#ProvinciaResidencia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://openuniversitydata/def/recursos-humanos#ComunidadResidencia> .
+<http://openuniversitydata/def/recursos-humanos#ProvinciaResidencia> <http://www.w3.org/2000/01/rdf-schema#label> "Provincia Residencia" .
+# 
+# http://schema.org/Person
+<http://schema.org/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person" .
+# 
+# http://www.owl-ontologies.com/geosparql#Feature
+<http://www.owl-ontologies.com/geosparql#Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/geosparql#SpatialObject> .
+<http://www.owl-ontologies.com/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#label> "Feature" .
+# 
+# http://www.owl-ontologies.com/geosparql#Geometry
+<http://www.owl-ontologies.com/geosparql#Geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/geosparql#SpatialObject> .
+<http://www.owl-ontologies.com/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#label> "Geometry" .
+# 
+# http://www.owl-ontologies.com/geosparql#Point
+<http://www.owl-ontologies.com/geosparql#Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/geosparql#Point> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/geosparql#Geometry> .
+<http://www.owl-ontologies.com/geosparql#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Point" .
+# 
+# http://www.owl-ontologies.com/geosparql#SpatialObject
+<http://www.owl-ontologies.com/geosparql#SpatialObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#label> "Spatial Object" .
+# 
+# http://www.w3.org/2001/XMLSchema#wKTLiteral
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+# 
+# http://www.w3.org/ns/org#Organization
+<http://www.w3.org/ns/org#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/org#Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization" .
+# 
+# http://www.w3.org/ns/org#Site
+<http://www.w3.org/ns/org#Site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/org#Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/geosparql#Feature> .
+<http://www.w3.org/ns/org#Site> <http://www.w3.org/2000/01/rdf-schema#label> "Site" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://openuniversitydata/kos/organizacion-y-servicios/tipo-unidad-responsable
+# 
+# http://openuniversitydata/kos/recursos-humanos/categoria-cuerpo-escala
+# 
+# http://openuniversitydata/kos/recursos-humanos/dedicacion
+# 
+# http://openuniversitydata/kos/recursos-humanos/genero
+# 
+# http://openuniversitydata/kos/recursos-humanos/situacion-administrativa
+# 
+# http://openuniversitydata/kos/recursos-humanos/tipo-contrato
+# 
+# http://openuniversitydata/kos/recursos-humanos/tipo-personal
+# 
+# http://openuniversitydata/kos/recursos-humanos/titulo-doctorado
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://www.owl-ontologies.com/geosparql#asWKT> <http://www.w3.org/2000/01/rdf-schema#label> "as w k t" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
