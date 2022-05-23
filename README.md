@@ -7,19 +7,25 @@ El propósito de este vocabulario es describir de forma semántica todo lo relac
 ## Links de interés
 Ontologías: <br>
 https://github.com/openuniversitydata/recursos-humanos/blob/main/vocab-personal-PAS/ontology/PAS%20Ontology.ttl <br>
- <br><br>
+https://github.com/openuniversitydata/recursos-humanos/blob/main/vocab-personal-PDI/ontology/PDI%20Ontology.ttl <br>
+<br><br>
 Documentaciones de las ontologías: <br>
 https://github.com/openuniversitydata/recursos-humanos/blob/main/vocab-personal-PAS/doc/index-es.html <br>
- <br><br>
+https://github.com/openuniversitydata/recursos-humanos/blob/main/vocab-personal-PDI/doc/index-es.html <br>
+<br><br>
 Modelos ontológicos conceptuales: <br>
 https://github.com/openuniversitydata/recursos-humanos/blob/main/vocab-personal-PAS/resources/PAS%20Diagrama_v2.svg <br>
- <br><br>
+https://github.com/openuniversitydata/recursos-humanos/blob/main/vocab-personal-PDI/resources/PDI%20Diagrama_v2.svg <br>
+<br><br>
 Ejemplos: <br>
 https://github.com/openuniversitydata/recursos-humanos/blob/main/vocab-personal-PAS/examples/PAS%20Ejemplo.ttl <br>
- <br><br>
+https://github.com/openuniversitydata/recursos-humanos/blob/main/vocab-personal-PDI/examples/PDI%20Ejemplo.ttl <br>
+<br><br>
 Mappings de las ontologías: <br>
 https://github.com/openuniversitydata/recursos-humanos/blob/main/vocab-personal-PAS/mappings/PAS%20Mapping.yml <br>
- <br><br>
+https://github.com/openuniversitydata/recursos-humanos/blob/main/vocab-personal-PDI/mappings/PDI%20Mapping.yml <br>
+<br><br>
 Grafos de conocimientos RDF: <br>
 https://github.com/openuniversitydata/recursos-humanos/blob/main/vocab-personal-PAS/PAS%20Knowledge%20Graph.nt <br>
- <br><br>
+https://github.com/openuniversitydata/recursos-humanos/blob/main/vocab-personal-PDI/PDI%20Knowledge%20Graph.nt <br>
+<br><br>
