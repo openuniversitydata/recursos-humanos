@@ -1,0 +1,80 @@
+ @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.owl-ontologies.com/geo#> .
+@prefix geosparql: <http://www.owl-ontologies.com/geosparql#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix orgser: <http://openuniversitydata/def/organizacion-y-servicios#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rrhh: <http://openuniversitydata/def/recursos-humanos#> .
+@prefix schema: <http://schema.org/> .
+@prefix univ: <http://openuniversitydata/def#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.example.org/openuniversitydata/PAS/Estela-Perez> a rrhh:PersonalAdministracionServicios ;
+    rrhh:anioNacimiento "1970"^^xsd:integer ;
+    rrhh:anioIncorporacion "2000"^^xsd:integer ;
+    rrhh:indOtraUnidad "true"^^xsd:boolean ;
+    rrhh:numHorasSemanalesTiempoParcial "25"^^xsd:integer ;
+    rrhh:indCargoRemunerado "true"^^xsd:boolean ;
+    rrhh:indImparteDocencia "false"^^xsd:boolean ;
+    rrhh:numTrienios "3"^^xsd:integer ;
+    rrhh:genero <http://openuniversitydata/kos/recursos-humanos/genero/mujer> ;
+    rrhh:dedicacion <http://openuniversitydata/kos/recursos-humanos/dedicacion/tiempo-parcial> ;
+    rrhh:tipoContrato <http://openuniversitydata/kos/recursos-humanos/tipo-contrato/indefinido> ;
+    rrhh:titulacionExigida <http://openuniversitydata/kos/recursos-humanos/titulacion-exigida/bachillerato> ;
+    rrhh:servicioPrestado <http://openuniversitydata/kos/recursos-humanos/servicio-prestado/personal-de-mantenimiento-y-servicios> ;
+    rrhh:tipoPersonal <http://openuniversitydata/kos/recursos-humanos/tipo-personal/personal-laboral> ;
+    rrhh:cuerpoEscalaPAS <http://openuniversitydata/kos/recursos-humanos/cuerpo-escala-PAS/personal-laboral> ;
+    rrhh:situacionAdministrativa <http://openuniversitydata/kos/recursos-humanos/situacion-administrativa/servicio-activo> ;
+    rrhh:trabajaEn <http://www.example.org/openuniversitydata/universidad/UPM> ;
+    rrhh:ejerceEn <http://www.example.org/openuniversitydata/otra-unidad/Ontology-Engineering-Group> ;
+    rrhh:posee <http://www.example.org/openuniversitydata/pais-nacionalidad/Espania> ;
+    rrhh:posee <http://www.example.org/openuniversitydata/continente-nacionalidad/Europa> ;
+    rrhh:posee <http://www.example.org/openuniversitydata/agregacion-paises-nacionalidad/Union-Europea> ;
+    rrhh:posee <http://www.example.org/openuniversitydata/municipio-residencia/Getafe> ;
+    rrhh:posee <http://www.example.org/openuniversitydata/provincia-residencia/Madrid> ;
+    rrhh:posee <http://www.example.org/openuniversitydata/comunidad-residencia/Comunidad-de-Madrid> .
+    
+<http://www.example.org/openuniversitydata/universidad/UPM> a univ:Universidad ;
+    dct:identifier "025"^^xsd:string ;
+    univ:tieneAsociado <http://www.example.org/openuniversitydata/anio/2022> .
+
+<http://www.example.org/openuniversitydata/anio/2022> a univ:Anio .
+
+<http://www.example.org/openuniversitydata/otra-unidad/Ontology-Engineering-Group> a rrhh:OtraUnidad ;
+    dct:identifier "025017" .
+
+<http://www.example.org/openuniversitydata/pais-nacionalidad/Espania> a rrhh:PaisNacionalidad ;
+    dct:identifier "108" ;
+    rdfs:subClassOf <http://www.example.org/openuniversitydata/continente-nacionalidad/Europa> ;
+    org:hasSite <http://www.example.org/openuniversitydata/point/1.601554;42.546245> .
+
+<http://www.example.org/openuniversitydata/continente-nacionalidad/Europa> a rrhh:ContinenteNacionalidad ;
+    dct:identifier "01" .
+
+<http://www.example.org/openuniversitydata/agregacion-paises-nacionalidad/Union-Europea> a rrhh:AgregacionPaisesNacionalidad ;
+    dct:identifier "11" ;
+    rdfs:subClassOf <http://www.example.org/openuniversitydata/continente-nacionalidad/Europa> .
+
+<http://www.example.org/openuniversitydata/municipio-residencia/Getafe> a rrhh:MunicipioResidencia ;
+    dct:identifier "065" ;
+    rdfs:subClassOf <http://www.example.org/openuniversitydata/provincia-residencia/Madrid> ;
+    org:hasSite <http://www.example.org/openuniversitydata/point/-3.732585;40.308263> .
+
+<http://www.example.org/openuniversitydata/provincia-residencia/Madrid> a rrhh:ProvinciaResidencia ;
+    dct:identifier "28" ;
+    rdfs:subClassOf <http://www.example.org/openuniversitydata/comunidad-residencia/Comunidad-de-Madrid> .
+
+<http://www.example.org/openuniversitydata/comunidad-residencia/Comunidad-de-Madrid> a rrhh:ComunidadResidencia ;
+    dct:identifier "13" .    
+
+<http://www.example.org/openuniversitydata/point/1.601554;42.546245> a geosparql:Point ;
+    geo:long "1.601554"^^xsd:double ;
+    geo:lat "42.546245"^^xsd:double ;
+    geosparql:asWKT "POINT (1.601554 42.546245)"^^geosparql:wktLiteral .
+
+<http://www.example.org/openuniversitydata/point/-3.732585;40.308263> a geosparql:Point ;
+    geo:long "-3.732585"^^xsd:double ;
+    geo:lat "40.308263"^^xsd:double ;
+    geosparql:asWKT "POINT (-3.732585 40.308263)"^^geosparql:wktLiteral .
