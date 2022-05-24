@@ -1528,16 +1528,16 @@ map:s_009 rdf:type rr:SubjectMap ;
 	rr:template "http://www.example.org/openuniversitydata/PAS/{}" .
 
 map:s_010 rdf:type rr:SubjectMap ;
-	rr:template "http://www.example.org/openuniversitydata/pais-nacionalidad/{des_pais_nacionalidad}" .
+	rr:template "http://www.example.org/openuniversitydata/point/{des_pais_nacionalidad}" .
 
 map:s_011 rdf:type rr:SubjectMap ;
-	rr:template "http://www.example.org/openuniversitydata/pais-nacionalidad/{des_pais_nacionalidad}" .
+	rr:template "http://www.example.org/openuniversitydata/point/{des_pais_nacionalidad}" .
 
 map:s_012 rdf:type rr:SubjectMap ;
-	rr:template "http://www.example.org/openuniversitydata/municipio-residencia/{des_municipio_residencia}" .
+	rr:template "http://www.example.org/openuniversitydata/point/{des_municipio_residencia}" .
 
 map:s_013 rdf:type rr:SubjectMap ;
-	rr:template "http://www.example.org/openuniversitydata/municipio-residencia/{des_municipio_residencia}" .
+	rr:template "http://www.example.org/openuniversitydata/point/{des_municipio_residencia}" .
 
 map:s_014 rdf:type rr:SubjectMap ;
 	rr:template "http://www.example.org/openuniversitydata/otra-unidad/{des_otra_unidad}" .
