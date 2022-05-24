@@ -440,55 +440,61 @@ This ontology has the following classes and properties.</span>
       <<!---->http://www.example.org/openuniversitydata/universidad/UPM> a univ:Universidad ;
          dct:identifier "025"^^xsd:string ;
          univ:tieneAsociado <<!---->http://www.example.org/openuniversitydata/curso/2022> .
-
+   
       <<!---->http://www.example.org/openuniversitydata/universidad/UCM> a univ:UniversidadDoctorado ;
          dct:identifier "010"^^xsd:string ;
          univ:estaUbicadaEn <<!---->http://www.example.org/openuniversitydata/pais-nacionalidad/Espania> ;
          univ:estaUbicadaEn <<!---->http://www.example.org/openuniversitydata/continente-nacionalidad/Europa> ;
          univ:estaUbicadaEn <<!---->http://www.example.org/openuniversitydata/agregacion-paises-nacionalidad/Union-Europea> .
-
+   
       <<!---->http://www.example.org/openuniversitydata/curso/2022> a univ:Anio .
-
+   
       <<!---->http://www.example.org/openuniversitydata/unidad-responsable/DATSI> a orgser:UnidadResponsable ;
          dct:identifier "0250003" ;
          orgser:tipoUnidadResponsable <<!---->http://openuniversitydata/kos/organizacion-y-servicios/tipo-unidad-responsable/departamento> .
-
+   
       <<!---->http://www.example.org/openuniversitydata/area-conocimiento/Arquitectura-y-Tecnologia-de-Computadores> a estud:AreaConocimiento ;
          dct:identifier "014" .
-
+   
       <<!---->http://www.example.org/openuniversitydata/pais-nacionalidad/Espania> a rrhh:PaisNacionalidad ;
          a univ:PaisDoctorado ;
          dct:identifier "108" ;
          rdfs:subClassOf <<!---->http://www.example.org/openuniversitydata/continente-nacionalidad/Europa> ;
-         org:hasSite <<!---->http://www.example.org/openuniversitydata/point/1.601554;42.546245> .
-
+         org:hasSite <<!---->http://www.example.org/openuniversitydata/pais-nacionalidad/Espania/site> .
+   
       <<!---->http://www.example.org/openuniversitydata/continente-nacionalidad/Europa> a rrhh:ContinenteNacionalidad ;
          a univ:ContinenteDoctorado ;
          dct:identifier "01" .
-
+   
       <<!---->http://www.example.org/openuniversitydata/agregacion-paises-nacionalidad/Union-Europea> a rrhh:AgregacionPaisesNacionalidad ;
          a univ:AgregacionPaisesDoctorado ;
          dct:identifier "11" ;
          rdfs:subClassOf <<!---->http://www.example.org/openuniversitydata/continente-nacionalidad/Europa> .
-
+   
       <<!---->http://www.example.org/openuniversitydata/municipio-residencia/Getafe> a rrhh:MunicipioResidencia ;
          dct:identifier "065" ;
          rdfs:subClassOf <<!---->http://www.example.org/openuniversitydata/provincia-residencia/Madrid> ;
-         org:hasSite <<!---->http://www.example.org/openuniversitydata/point/-3.732585;40.308263> .
-
+         org:hasSite <<!---->http://www.example.org/openuniversitydata/municipio-residencia/Getafe/site> .
+   
       <<!---->http://www.example.org/openuniversitydata/provincia-residencia/Madrid> a rrhh:ProvinciaResidencia ;
          dct:identifier "28" ;
          rdfs:subClassOf <<!---->http://www.example.org/openuniversitydata/comunidad-residencia/Comunidad-de-Madrid> .
-
+   
       <<!---->http://www.example.org/openuniversitydata/comunidad-residencia/Comunidad-de-Madrid> a rrhh:ComunidadResidencia ;
          dct:identifier "13" .
-
-      <<!---->http://www.example.org/openuniversitydata/point/1.601554;42.546245> a geosparql:Point ;
+   
+      <<!---->http://www.example.org/openuniversitydata/pais-nacionalidad/Espania/site> a geosparql:Feature ;
+         geosparql:hasGeometry <<!---->http://www.example.org/openuniversitydata/pais-nacionalidad/Espania/site/geometry> .
+   
+      <<!---->http://www.example.org/openuniversitydata/pais-nacionalidad/Espania/site/geometry> a geosparql:Point ;
          geo:long "1.601554"^^xsd:double ;
          geo:lat "42.546245"^^xsd:double ;
          geosparql:asWKT "POINT (1.601554 42.546245)"^^geosparql:wktLiteral .
-
-      <<!---->http://www.example.org/openuniversitydata/point/-3.732585;40.308263> a geosparql:Point ;
+   
+      <<!---->http://www.example.org/openuniversitydata/municipio-residencia/Getafe/site> a geosparql:Feature ;
+         geosparql:hasGeometry <<!---->http://www.example.org/openuniversitydata/municipio-residencia/Getafe/site/geometry> .
+   
+      <<!---->http://www.example.org/openuniversitydata/municipio-residencia/Getafe/site/geometry> a geosparql:Point ;
          geo:long "-3.732585"^^xsd:double ;
          geo:lat "40.308263"^^xsd:double ;
          geosparql:asWKT "POINT (-3.732585 40.308263)"^^geosparql:wktLiteral .
