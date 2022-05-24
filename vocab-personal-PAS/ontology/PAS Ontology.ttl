@@ -18,6 +18,32 @@ univ: a owl:Ontology ;
     dc:title "PAS Ontology" ;
     owl:versionInfo "0.0.2" .
 
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator a owl:AnnotationProperty ;
+           dc:creator "Víctor Morcuende" .
+
+
+###  http://purl.org/dc/elements/1.1/description
+dc:description a owl:AnnotationProperty ;
+               dc:description "Ontology code created by Chowlk" .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title a owl:AnnotationProperty ;
+         dc:title "PAS Ontology" .
+
+
+###  http://www.w3.org/2002/07/owl#versionInfo
+owl:versionInfo a owl:AnnotationProperty ;
+                owl:versionInfo "0.0.2" .
+
+
+
+
 univ:tieneAsociado a owl:ObjectProperty ;
     rdfs:label "tiene asociado" ;
     rdfs:domain univ:Universidad ;
