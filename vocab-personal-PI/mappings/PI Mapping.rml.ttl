@@ -383,7 +383,7 @@ map:om_030 rml:reference "anio_resolucion_convocatoria" ;
 	rr:datatype xsd:integer ;
 	rr:termType rr:Literal .
 
-map:om_031 rml:reference "duracionMeses" ;
+map:om_031 rml:reference "duracion_meses" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:integer ;
 	rr:termType rr:Literal .
@@ -468,7 +468,7 @@ map:om_050 rml:reference "anio_resolucion_convocatoria" ;
 	rr:datatype xsd:integer ;
 	rr:termType rr:Literal .
 
-map:om_051 rml:reference "duracionMeses" ;
+map:om_051 rml:reference "duracion_meses" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:integer ;
 	rr:termType rr:Literal .
@@ -1633,16 +1633,16 @@ map:s_011 rdf:type rr:SubjectMap ;
 	rr:template "http://www.example.org/openuniversitydata/PI/{}" .
 
 map:s_012 rdf:type rr:SubjectMap ;
-	rr:template "http://www.example.org/openuniversitydata/pais-nacionalidad/{des_pais_nacionalidad}" .
+	rr:template "http://www.example.org/openuniversitydata/point/{des_pais_nacionalidad}" .
 
 map:s_013 rdf:type rr:SubjectMap ;
-	rr:template "http://www.example.org/openuniversitydata/pais-nacionalidad/{des_pais_nacionalidad}" .
+	rr:template "http://www.example.org/openuniversitydata/point/{des_pais_nacionalidad}" .
 
 map:s_014 rdf:type rr:SubjectMap ;
-	rr:template "http://www.example.org/openuniversitydata/pais-doctorado/{des_pais_doctorado}" .
+	rr:template "http://www.example.org/openuniversitydata/point/{des_pais_doctorado}" .
 
 map:s_015 rdf:type rr:SubjectMap ;
-	rr:template "http://www.example.org/openuniversitydata/pais-doctorado/{des_pais_doctorado}" .
+	rr:template "http://www.example.org/openuniversitydata/point/{des_pais_doctorado}" .
 
 map:s_016 rdf:type rr:SubjectMap ;
 	rr:template "http://www.example.org/openuniversitydata/agregacion-paises-doctorado/{des_agregacion_paises_doctorado}" .
