@@ -129,7 +129,7 @@ mappings:
       - [rrhh:anioLecturaTesis, $(anio_lectura_tesis), xsd:integer]
       - [rrhh:anioNacimiento, $(anio_nacimiento), xsd:integer]
       - [rrhh:anioResolucionConvocatoria, $(anio_resolucion_convocatoria), xsd:integer]
-      - [rrhh:duracionMeses, $(duracionMeses), xsd:integer]
+      - [rrhh:duracionMeses, $(duracion_meses), xsd:integer]
       - [rrhh:genero, http://openuniversitydata/kos/recursos-humanos/genero/$(des_genero)]
       - [rrhh:dedicacion, http://openuniversitydata/kos/recursos-humanos/dedicacion/$(des_dedicacion)]
       - [rrhh:tipoOrganismo, http://openuniversitydata/kos/recursos-humanos/tipo-organismo/$(des_tipo_organismo)]
@@ -204,7 +204,7 @@ mappings:
       - [rrhh:anioLecturaTesis, $(anio_lectura_tesis), xsd:integer]
       - [rrhh:anioNacimiento, $(anio_nacimiento), xsd:integer]
       - [rrhh:anioResolucionConvocatoria, $(anio_resolucion_convocatoria), xsd:integer]
-      - [rrhh:duracionMeses, $(duracionMeses), xsd:integer]
+      - [rrhh:duracionMeses, $(duracion_meses), xsd:integer]
       - [rrhh:genero, http://openuniversitydata/kos/recursos-humanos/genero/$(des_genero)]
       - [rrhh:dedicacion, http://openuniversitydata/kos/recursos-humanos/dedicacion/$(des_dedicacion)]
       - [rrhh:tipoOrganismo, http://openuniversitydata/kos/recursos-humanos/tipo-organismo/$(des_tipo_organismo)]
@@ -272,7 +272,7 @@ mappings:
   triplesMapPoint:
     sources:
       - [UC3M-2020.csv~csv]
-    s: http://www.example.org/openuniversitydata/pais-nacionalidad/$(des_pais_nacionalidad)
+    s: http://www.example.org/openuniversitydata/point/$(des_pais_nacionalidad)
     po:
       - [a, geosparql:Point]
       - [geo:lat, $(lat_pais_nacionalidad), xsd:double]
@@ -282,7 +282,7 @@ mappings:
   triplesMapPoint21:
     sources:
       - [UCM-2020.csv~csv]
-    s: http://www.example.org/openuniversitydata/pais-nacionalidad/$(des_pais_nacionalidad)
+    s: http://www.example.org/openuniversitydata/point/$(des_pais_nacionalidad)
     po:
       - [a, geosparql:Point]
       - [geo:lat, $(lat_pais_nacionalidad), xsd:double]
@@ -292,7 +292,7 @@ mappings:
   triplesMapPoint2:
     sources:
       - [UC3M-2020.csv~csv]
-    s: http://www.example.org/openuniversitydata/pais-doctorado/$(des_pais_doctorado)
+    s: http://www.example.org/openuniversitydata/point/$(des_pais_doctorado)
     po:
       - [a, geosparql:Point]
       - [geo:lat, $(lat_pais_doctorado), xsd:double]
@@ -302,7 +302,7 @@ mappings:
   triplesMapPoint22:
     sources:
       - [UCM-2020.csv~csv]
-    s: http://www.example.org/openuniversitydata/pais-doctorado/$(des_pais_doctorado)
+    s: http://www.example.org/openuniversitydata/point/$(des_pais_doctorado)
     po:
       - [a, geosparql:Point]
       - [geo:lat, $(lat_pais_doctorado), xsd:double]
