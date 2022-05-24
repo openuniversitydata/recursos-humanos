@@ -28,9 +28,9 @@
     rrhh:estudioEn <http://www.example.org/openuniversitydata/universidad/UCM> ;
     rrhh:perteneceA <http://www.example.org/openuniversitydata/unidad-responsable/DATSI> ;
     rrhh:formaParteDe <http://www.example.org/openuniversitydata/area-conocimiento/Arquitectura-y-Tecnologia-de-Computadores> ;
-    rrhh:posee <http://www.example.org/openuniversitydata/pais-nacionalidad/Espania> ;
-    rrhh:posee <http://www.example.org/openuniversitydata/continente-nacionalidad/Europa> ;
-    rrhh:posee <http://www.example.org/openuniversitydata/agregacion-paises-nacionalidad/Union-Europea> .
+    rrhh:posee <http://www.example.org/openuniversitydata/pais/Espania> ;
+    rrhh:posee <http://www.example.org/openuniversitydata/continente/Europa> ;
+    rrhh:posee <http://www.example.org/openuniversitydata/agregacion-paises/Union-Europea> .
     
 <http://www.example.org/openuniversitydata/universidad/UPM> a univ:Universidad ;
     dct:identifier "025"^^xsd:string ;
@@ -51,25 +51,25 @@
 <http://www.example.org/openuniversitydata/area-conocimiento/Arquitectura-y-Tecnologia-de-Computadores> a estud:AreaConocimiento ;
     dct:identifier "014" .
 
-<http://www.example.org/openuniversitydata/pais-nacionalidad/Espania> a rrhh:PaisNacionalidad ;
+<http://www.example.org/openuniversitydata/pais/Espania> a rrhh:PaisNacionalidad ;
     a univ:PaisDoctorado ;
     dct:identifier "108" ;
-    rdfs:subClassOf <http://www.example.org/openuniversitydata/continente-nacionalidad/Europa> ;
-    org:hasSite <http://www.example.org/openuniversitydata/pais-nacionalidad/Espania/site> .
+    rdfs:subClassOf <http://www.example.org/openuniversitydata/continente/Europa> ;
+    org:hasSite <http://www.example.org/openuniversitydata/pais/Espania/site> .
 
-<http://www.example.org/openuniversitydata/continente-nacionalidad/Europa> a rrhh:ContinenteNacionalidad ;
+<http://www.example.org/openuniversitydata/continente/Europa> a rrhh:ContinenteNacionalidad ;
     a univ:ContinenteDoctorado ;
     dct:identifier "01" .
 
-<http://www.example.org/openuniversitydata/agregacion-paises-nacionalidad/Union-Europea> a rrhh:AgregacionPaisesNacionalidad ;
+<http://www.example.org/openuniversitydata/agregacion-paises/Union-Europea> a rrhh:AgregacionPaisesNacionalidad ;
     a univ:AgregacionPaisesDoctorado ;
     dct:identifier "11" ;
-    rdfs:subClassOf <http://www.example.org/openuniversitydata/continente-nacionalidad/Europa> .
+    rdfs:subClassOf <http://www.example.org/openuniversitydata/continente/Europa> .
 
-<http://www.example.org/openuniversitydata/pais-nacionalidad/Espania/site> a geosparql:Feature ;
-    geosparql:hasGeometry <http://www.example.org/openuniversitydata/pais-nacionalidad/Espania/site/geometry> .
+<http://www.example.org/openuniversitydata/pais/Espania/site> a geosparql:Feature ;
+    geosparql:hasGeometry <http://www.example.org/openuniversitydata/pais/Espania/site/geometry> .
 
-<http://www.example.org/openuniversitydata/pais-nacionalidad/Espania/site/geometry> a geosparql:Point ;
+<http://www.example.org/openuniversitydata/pais/Espania/site/geometry> a geosparql:Point ;
     geo:long "1.601554"^^xsd:double ;
     geo:lat "42.546245"^^xsd:double ;
     geosparql:asWKT "POINT (1.601554 42.546245)"^^geosparql:wktLiteral .
